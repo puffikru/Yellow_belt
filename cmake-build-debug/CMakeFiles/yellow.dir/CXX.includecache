@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/bulakhigor/CLionProjects/yellow/main.cpp
+iostream
+-
+tuple
+-
+map
+-
+utility
+-
+sstream
+-
+vector
+-
+
