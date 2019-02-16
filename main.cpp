@@ -20,9 +20,6 @@ class TeamTasks {
 public:
     // Получить статистику по статусам задач конкретного разработчика
     const TasksInfo& GetPersonTasksInfo(const string& person) const {
-//        if(developers.count(person) > 0){
-//            return developers.at(person);
-//        }
         return developers.at(person);
     }
 
