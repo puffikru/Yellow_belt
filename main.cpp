@@ -37,8 +37,7 @@ public:
     // подробности см. ниже
     tuple<TasksInfo, TasksInfo> PerformPersonTasks(
         const string& person, int task_count) {
-        TasksInfo updated_tasks;
-        TasksInfo remaining_tasks;
+
         auto& person_info = developers[person];
 
 //        cout << person_info.size() << endl;
@@ -54,13 +53,16 @@ public:
                 if(person_info[static_cast<TaskStatus>(i)] != 0 && person_info[static_cast<TaskStatus>(i)] >= task_count) {
                     person_info[static_cast<TaskStatus>(i)] -= task_count;
                 }
-                break;
+
             } else {
                 updated_tasks[static_cast<TaskStatus>(i + 1)] = cur_item_cnt;
                 remaining_tasks[static_cast<TaskStatus>(i)] = 0;
                 person_info[static_cast<TaskStatus>(i)] = 0;
                 task_count -= cur_item_cnt;
             }
+        }
+
+        for (size_t i = 0; i < developers[person].size(); ++i) {
             if (updated_tasks[static_cast<TaskStatus>(i)] == 0 && remaining_tasks[static_cast<TaskStatus>(i)] == 0) {
                 continue;
             } else {
@@ -74,6 +76,8 @@ public:
 
 private:
     map<string, TasksInfo> developers;
+    TasksInfo updated_tasks;
+    TasksInfo remaining_tasks;
 };
 
 void PrintTasksInfo(TasksInfo tasks_info) {
