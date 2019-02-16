@@ -5,7 +5,6 @@
 #include <sstream>
 #include <vector>
 
-
 using namespace std;
 
 enum class TaskStatus {
@@ -16,7 +15,6 @@ enum class TaskStatus {
 };
 
 using TasksInfo = map<TaskStatus, int>;
-
 
 class TeamTasks {
 public:
@@ -36,38 +34,45 @@ public:
     // Обновить статусы по данному количеству задач конкретного разработчика,
     // подробности см. ниже
     tuple<TasksInfo, TasksInfo> PerformPersonTasks(
-        const string& person, int task_count) {
-
+        const string& person, int task_count)
+    {
+        updated_tasks.clear();
+        remaining_tasks.clear();
         auto& person_info = developers[person];
 
-//        cout << person_info.size() << endl;
-
+//        Обход тасков и обновление
         for (size_t i = 0; i < person_info.size(); ++i) {
-            if (person_info.count(static_cast<TaskStatus>(i)) == 0) {
+            auto index = static_cast<TaskStatus>(i);
+            auto next_index = static_cast<TaskStatus>(i + 1);
+            if (person_info.count(index) == 0) {
                 continue;
             }
-            const auto cur_item_cnt = person_info.at(static_cast<TaskStatus>(i));
+            const auto cur_item_cnt = person_info.at(index);
             if (cur_item_cnt >= task_count) {
-                updated_tasks[static_cast<TaskStatus>(i + 1)] = task_count;
-                remaining_tasks[static_cast<TaskStatus>(i)] = cur_item_cnt - task_count;
-                if(person_info[static_cast<TaskStatus>(i)] != 0 && person_info[static_cast<TaskStatus>(i)] >= task_count) {
-                    person_info[static_cast<TaskStatus>(i)] -= task_count;
+                updated_tasks[next_index] = task_count;
+                remaining_tasks[index] = cur_item_cnt - task_count;
+                if (person_info[index] != 0
+                    && person_info[index] >= task_count) {
+                    person_info[index] -= task_count;
                 }
 
             } else {
-                updated_tasks[static_cast<TaskStatus>(i + 1)] = cur_item_cnt;
-                remaining_tasks[static_cast<TaskStatus>(i)] = 0;
-                person_info[static_cast<TaskStatus>(i)] = 0;
+                updated_tasks[next_index] = cur_item_cnt;
+                remaining_tasks[index] = 0;
+                person_info[index] = 0;
                 task_count -= cur_item_cnt;
             }
         }
 
-        for (size_t i = 0; i < developers[person].size(); ++i) {
-            if (updated_tasks[static_cast<TaskStatus>(i)] == 0 && remaining_tasks[static_cast<TaskStatus>(i)] == 0) {
-                continue;
+//       Мерж двух мапов в основной
+        for (size_t i = 0; i < person_info.size(); ++i) {
+            auto index = static_cast<TaskStatus>(i);
+            if (updated_tasks[index] == 0
+                && remaining_tasks[index] == 0) {
+                person_info[index] = 0;
             } else {
-                person_info[static_cast<TaskStatus>(i)] = updated_tasks[static_cast<TaskStatus>(i)] +
-                    remaining_tasks[static_cast<TaskStatus>(i)];
+                person_info[index] = updated_tasks[index] +
+                    remaining_tasks[index];
             }
         }
 
@@ -76,6 +81,7 @@ public:
 
 private:
     map<string, TasksInfo> developers;
+//    Вынес сюда свойства, так как нужно, чтоб параметры сохранялись после выхода из метода
     TasksInfo updated_tasks;
     TasksInfo remaining_tasks;
 };
@@ -86,9 +92,6 @@ void PrintTasksInfo(TasksInfo tasks_info) {
          ", " << tasks_info[TaskStatus::TESTING] << " tasks are being tested" <<
          ", " << tasks_info[TaskStatus::DONE] << " tasks are done" << endl;
 }
-
-
-
 
 int main() {
 
