@@ -40,8 +40,7 @@ public:
 
         auto& person_info = developers[person];
 
-//        cout << person_info.size() << endl;
-
+//        Обход тасков и обновление
         for (size_t i = 0; i < person_info.size(); ++i) {
             if (person_info.count(static_cast<TaskStatus>(i)) == 0) {
                 continue;
@@ -62,6 +61,7 @@ public:
             }
         }
 
+//       Мерж двух мапов в основной
         for (size_t i = 0; i < developers[person].size(); ++i) {
             if (updated_tasks[static_cast<TaskStatus>(i)] == 0 && remaining_tasks[static_cast<TaskStatus>(i)] == 0) {
                 continue;
@@ -76,6 +76,7 @@ public:
 
 private:
     map<string, TasksInfo> developers;
+//    Вынес сюда свойства, так как нужно, чтоб параметры сохранялись после выхода из метода
     TasksInfo updated_tasks;
     TasksInfo remaining_tasks;
 };
