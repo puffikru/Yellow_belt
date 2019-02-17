@@ -1,7 +1,6 @@
 #include <iostream>
 #include <tuple>
 #include <map>
-#include <utility>
 #include <sstream>
 #include <vector>
 
@@ -15,6 +14,25 @@ enum class TaskStatus {
 };
 
 using TasksInfo = map<TaskStatus, int>;
+
+ostream& operator <<(ostream& out, const TaskStatus& status) {
+    string statusName;
+    switch (status) {
+        case TaskStatus::NEW:
+            statusName = "\"NEW\"";
+            break;
+        case TaskStatus::IN_PROGRESS:
+            statusName = "\"IN_PROGRESS\"";
+            break;
+        case TaskStatus::TESTING:
+            statusName = "\"TESTING\"";
+            break;
+        case TaskStatus::DONE:
+            statusName = "\"DONE\"";
+            break;
+    }
+    return out << statusName;
+}
 
 class TeamTasks {
 public:
@@ -62,7 +80,10 @@ public:
         }
 
 //       Мерж двух мапов в основной
-        for (size_t i = 0; i < person_info.size(); ++i) {
+
+//        size_t status_num = updated_tasks.size() + remaining_tasks.size();
+        cout << person_info.size() << endl;
+        for (size_t i = 0; i < 3; ++i) {
             auto index = static_cast<TaskStatus>(i);
             if (updated_tasks[index] == 0
                 && remaining_tasks[index] == 0) {
@@ -70,6 +91,12 @@ public:
             } else {
                 person_info[index] = updated_tasks[index] +
                     remaining_tasks[index];
+            }
+            if (updated_tasks[index] == 0) {
+                updated_tasks.erase(index);
+            }
+            if (remaining_tasks[index] == 0) {
+                remaining_tasks.erase(index);
             }
         }
 
@@ -90,34 +117,57 @@ void PrintTasksInfo(TasksInfo tasks_info) {
          ", " << tasks_info[TaskStatus::DONE] << " tasks are done" << endl;
 }
 
+template <typename Collection>
+string Join(const Collection& c, const string& d) {
+    stringstream ss;
+    bool isFirst = true;
+    for (const auto& i : c) {
+        if(!isFirst) {
+            ss << d;
+        }
+        isFirst = false;
+        ss << i;
+    }
+    return ss.str();
+}
+template <typename F, typename S>
+ostream& operator <<(ostream& out, const pair<F,S>& p) {
+    return out << p.first << ": " << p.second;
+}
+template <typename K, typename V>
+ostream& operator <<(ostream& out, const map<K,V>& m){
+    return out << '{' << Join(m, ", ") << '}';
+}
+template <typename T>
+ostream& operator <<(ostream& out, const vector<T>& v) {
+    return out << '['  << Join(v, ", ") << ']';
+}
+
 int main() {
 
     TeamTasks tasks;
 
-    tasks.AddNewTask("Ilia");
-    for (int i = 0; i < 3; ++i) {
-        tasks.AddNewTask("Ivan");
+    while(cin) {
+        string command, person;
+        int num;
+        cin >> command >> person;
+        if (command == "AddNewTasks") {
+            cin >> num;
+            while (num--)
+                tasks.AddNewTask(person);
+            cout << "[]" << endl;
+        } else if (command == "PerformPersonTasks") {
+            cin >> num;
+            TasksInfo updated_tasks, untouched_tasks;
+            tie(updated_tasks, untouched_tasks) =
+                tasks.PerformPersonTasks(person, num);
+            cout << vector<TasksInfo>{updated_tasks, untouched_tasks } << endl;
+        } else if (command == "GetPersonTasksInfo") {
+            cout << tasks.GetPersonTasksInfo(person) << endl;
+        } else if (command.size() && command[0] != '#'){
+            throw invalid_argument("wrong command: " + command);
+        }
     }
-    cout << "Ilia's tasks: ";
-    PrintTasksInfo(tasks.GetPersonTasksInfo("Ilia"));
-    cout << "Ivan's tasks: ";
-    PrintTasksInfo(tasks.GetPersonTasksInfo("Ivan"));
-
-    TasksInfo updated_tasks, untouched_tasks;
-
-    tie(updated_tasks, untouched_tasks) =
-        tasks.PerformPersonTasks("Ivan", 2);
-    cout << "Updated Ivan's tasks: ";
-    PrintTasksInfo(updated_tasks);
-    cout << "Untouched Ivan's tasks: ";
-    PrintTasksInfo(untouched_tasks);
-
-    tie(updated_tasks, untouched_tasks) =
-        tasks.PerformPersonTasks("Ivan", 2);
-    cout << "Updated Ivan's tasks: ";
-    PrintTasksInfo(updated_tasks);
-    cout << "Untouched Ivan's tasks: ";
-    PrintTasksInfo(untouched_tasks);
 
     return 0;
 }
