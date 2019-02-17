@@ -49,7 +49,6 @@ public:
     }
 
     // Обновить статусы по данному количеству задач конкретного разработчика,
-    // подробности см. ниже
     tuple<TasksInfo, TasksInfo> PerformPersonTasks(
         const string& person, int task_count)
     {
@@ -65,26 +64,35 @@ public:
                 continue;
             }
             const auto cur_item_cnt = person_info.at(index);
+            if (cur_item_cnt == 0) {
+                continue;
+            }
             if (cur_item_cnt >= task_count) {
-                updated_tasks[next_index] = task_count;
-                remaining_tasks[index] = cur_item_cnt - task_count;
+                if (task_count > 0) {
+                    updated_tasks[next_index] = task_count;
+                }
+
+                if (cur_item_cnt - task_count <= 0) {
+                    remaining_tasks.erase(index);
+                } else {
+                    remaining_tasks[index] = cur_item_cnt - task_count;
+                }
                 if (person_info[index] != 0
                     && person_info[index] >= task_count) {
                     person_info[index] -= task_count;
                 }
 
+                task_count = 0;
+
             } else {
                 updated_tasks[next_index] = cur_item_cnt;
                 remaining_tasks[index] = 0;
-                person_info[index] = 0;
+                person_info.erase(index);
                 task_count -= cur_item_cnt;
             }
         }
 
 //       Мерж двух мапов в основной
-
-//        size_t status_num = updated_tasks.size() + remaining_tasks.size();
-        cout << person_info.size() << endl;
         for (size_t i = 0; i < 3; ++i) {
             auto index = static_cast<TaskStatus>(i);
             if (updated_tasks[index] == 0
@@ -107,17 +115,10 @@ public:
 
 private:
     map<string, TasksInfo> developers;
-//    Вынес сюда свойства, так как нужно, чтоб параметры сохранялись после выхода из метода
     TasksInfo updated_tasks;
     TasksInfo remaining_tasks;
 };
 
-void PrintTasksInfo(TasksInfo tasks_info) {
-    cout << tasks_info[TaskStatus::NEW] << " new tasks" <<
-         ", " << tasks_info[TaskStatus::IN_PROGRESS] << " tasks in progress" <<
-         ", " << tasks_info[TaskStatus::TESTING] << " tasks are being tested" <<
-         ", " << tasks_info[TaskStatus::DONE] << " tasks are done" << endl;
-}
 
 
 //Отладочный код, чтоб норм вывод смотреть
