@@ -84,7 +84,9 @@ public:
 //       Мерж двух мапов в основной
 
 //        size_t status_num = updated_tasks.size() + remaining_tasks.size();
-        cout << person_info.size() << endl;
+        //cout << person_info.size() << endl;
+        
+        // Комментарий
         for (size_t i = 0; i < 3; ++i) {
             auto index = static_cast<TaskStatus>(i);
             if (updated_tasks[index] == 0
