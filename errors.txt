@@ -96,3 +96,14 @@ PerformPersonTasks Bob 3
 [{"IN_PROGRESS": 1}, {}]
 {"IN_PROGRESS": 1, "DONE": 10}
 [{}, {}]
+
+
+Compile error: b"/tmp/tmpsf72jjvh.cpp: In function 'int main()':\n/tmp/tmpsf72jjvh.cpp:167:27: error: no matching function for call to 'Sqr(int&)'\n
+   auto result = Sqr(test);\n
+  ^\n/tmp/tmpsf72jjvh.cpp:128:17: note: candidate: template<class Key, class Value> std::map<K, V> Sqr(const std::map<K, V>&)\n map<Key, Value> Sqr(const map<Key, Value>& m) {\n
+  ^~~\n/tmp/tmpsf72jjvh.cpp:128:17: note:   template argument deduction/substitution failed:\n/tmp/tmpsf72jjvh.cpp:167:27: note:   mismatched types 'const std::map<K, V>' and 'int'\n
+  auto result = Sqr(test);\n
+  ^\n/tmp/tmpsf72jjvh.cpp:133:21: note: candidate: template<class First, class Second> std::pair<_T1, _T2> Sqr(const std::pair<_T1, _T2>&)\n pair<First, Second> Sqr(const pair<First, Second>& p) {\n
+   ^~~\n/tmp/tmpsf72jjvh.cpp:133:21: note:   template argument deduction/substitution failed:\n/tmp/tmpsf72jjvh.cpp:167:27: note:   mismatched types 'const std::pair<_T1, _T2>' and 'int'\n     auto result = Sqr(test);\n
+    ^\n/tmp/tmpsf72jjvh.cpp:138:11: note: candidate: template<class T> std::vector<T> Sqr(const std::vector<T>&)\n vector<T> Sqr(const vector<T>& v) {\n
+    ^~~\n/tmp/tmpsf72jjvh.cpp:138:11: note:   template argument deduction/substitution failed:\n/tmp/tmpsf72jjvh.cpp:167:27: note:   mismatched types 'const std::vector<T>' and 'int'\n     auto result = Sqr(test);\n                           ^\n"
