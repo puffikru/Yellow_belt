@@ -57,7 +57,7 @@ public:
         auto& person_info = developers[person];
 
 //        Обход тасков и обновление
-        for (size_t i = 0; i < person_info.size(); ++i) {
+        for (int i = 0; i < 3; ++i) {
             auto index = static_cast<TaskStatus>(i);
             auto next_index = static_cast<TaskStatus>(i + 1);
             if (person_info.count(index) == 0) {
@@ -68,7 +68,8 @@ public:
                 continue;
             }
             if (cur_item_cnt >= task_count) {
-                if (task_count > 0) {
+
+                if (task_count > 0 && i < 3) {
                     updated_tasks[next_index] = task_count;
                 }
 
@@ -92,12 +93,17 @@ public:
             }
         }
 
+        remaining_tasks[static_cast<TaskStatus>(3)] = person_info[static_cast<TaskStatus>(3)];
+
 //       Мерж двух мапов в основной
-        for (size_t i = 0; i < 3; ++i) {
+        for (size_t i = 0; i <= 3; ++i) {
             auto index = static_cast<TaskStatus>(i);
             if (updated_tasks[index] == 0
                 && remaining_tasks[index] == 0) {
-                person_info[index] = 0;
+//                person_info[index] = 0;
+                if (person_info[index] == 0){
+                    person_info.erase(index);
+                }
             } else {
                 person_info[index] = updated_tasks[index] +
                     remaining_tasks[index];
@@ -105,7 +111,7 @@ public:
             if (updated_tasks[index] == 0) {
                 updated_tasks.erase(index);
             }
-            if (remaining_tasks[index] == 0) {
+            if (remaining_tasks[index] == 0 || (i == 3 && remaining_tasks.count(index) > 0)) {
                 remaining_tasks.erase(index);
             }
         }
@@ -151,7 +157,6 @@ ostream& operator <<(ostream& out, const vector<T>& v) {
 int main() {
 
     TeamTasks tasks;
-
 
     //Отладочный код, чтоб норм вывод смотреть
     while(cin) {
