@@ -15,6 +15,8 @@ enum class TaskStatus {
 
 using TasksInfo = map<TaskStatus, int>;
 
+
+//Отладочный код, чтоб норм вывод смотреть
 ostream& operator <<(ostream& out, const TaskStatus& status) {
     string statusName;
     switch (status) {
@@ -117,6 +119,8 @@ void PrintTasksInfo(TasksInfo tasks_info) {
          ", " << tasks_info[TaskStatus::DONE] << " tasks are done" << endl;
 }
 
+
+//Отладочный код, чтоб норм вывод смотреть
 template <typename Collection>
 string Join(const Collection& c, const string& d) {
     stringstream ss;
@@ -147,6 +151,8 @@ int main() {
 
     TeamTasks tasks;
 
+
+    //Отладочный код, чтоб норм вывод смотреть
     while(cin) {
         string command, person;
         int num;
