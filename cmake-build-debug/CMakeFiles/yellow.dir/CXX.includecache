@@ -9,16 +9,10 @@
 /Users/bulakhigor/CLionProjects/yellow/main.cpp
 iostream
 -
-vector
+string
 -
 map
 -
-sstream
--
-tuple
--
-utility
--
-exception
+vector
 -
 

@@ -98,12 +98,29 @@ PerformPersonTasks Bob 3
 [{}, {}]
 
 
-Compile error: b"/tmp/tmpsf72jjvh.cpp: In function 'int main()':\n/tmp/tmpsf72jjvh.cpp:167:27: error: no matching function for call to 'Sqr(int&)'\n
-   auto result = Sqr(test);\n
-  ^\n/tmp/tmpsf72jjvh.cpp:128:17: note: candidate: template<class Key, class Value> std::map<K, V> Sqr(const std::map<K, V>&)\n map<Key, Value> Sqr(const map<Key, Value>& m) {\n
-  ^~~\n/tmp/tmpsf72jjvh.cpp:128:17: note:   template argument deduction/substitution failed:\n/tmp/tmpsf72jjvh.cpp:167:27: note:   mismatched types 'const std::map<K, V>' and 'int'\n
-  auto result = Sqr(test);\n
-  ^\n/tmp/tmpsf72jjvh.cpp:133:21: note: candidate: template<class First, class Second> std::pair<_T1, _T2> Sqr(const std::pair<_T1, _T2>&)\n pair<First, Second> Sqr(const pair<First, Second>& p) {\n
-   ^~~\n/tmp/tmpsf72jjvh.cpp:133:21: note:   template argument deduction/substitution failed:\n/tmp/tmpsf72jjvh.cpp:167:27: note:   mismatched types 'const std::pair<_T1, _T2>' and 'int'\n     auto result = Sqr(test);\n
-    ^\n/tmp/tmpsf72jjvh.cpp:138:11: note: candidate: template<class T> std::vector<T> Sqr(const std::vector<T>&)\n vector<T> Sqr(const vector<T>& v) {\n
-    ^~~\n/tmp/tmpsf72jjvh.cpp:138:11: note:   template argument deduction/substitution failed:\n/tmp/tmpsf72jjvh.cpp:167:27: note:   mismatched types 'const std::vector<T>' and 'int'\n     auto result = Sqr(test);\n                           ^\n"
+
+10
+ALL_BUSES
+BUSES_FOR_STOP Marushkino
+STOPS_FOR_BUS 32K
+NEW_BUS 32 3 Tolstopaltsevo Marushkino Vnukovo
+NEW_BUS 32K 6 Tolstopaltsevo Marushkino Vnukovo Peredelkino Solntsevo Skolkovo
+BUSES_FOR_STOP Vnukovo
+NEW_BUS 950 6 Kokoshkino Marushkino Vnukovo Peredelkino Solntsevo Troparyovo
+NEW_BUS 272 4 Vnukovo Moskovsky Rumyantsevo Troparyovo
+STOPS_FOR_BUS 272
+ALL_BUSES
+
+
+No buses
+No stop
+No bus
+32 32K
+Stop Vnukovo: 32 32K 950
+Stop Moskovsky: no interchange
+Stop Rumyantsevo: no interchange
+Stop Troparyovo: 950
+Bus 272: Vnukovo Moskovsky Rumyantsevo Troparyovo
+Bus 32: Tolstopaltsevo Marushkino Vnukovo
+Bus 32K: Tolstopaltsevo Marushkino Vnukovo Peredelkino Solntsevo Skolkovo
+Bus 950: Kokoshkino Marushkino Vnukovo Peredelkino Solntsevo Troparyovo
