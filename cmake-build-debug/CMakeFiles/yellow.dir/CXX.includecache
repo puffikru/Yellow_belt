@@ -7,12 +7,16 @@
 #IncludeRegexTransform: 
 
 /Users/bulakhigor/CLionProjects/yellow/main.cpp
+string
+-
 iostream
 -
-string
+cassert
+-
+vector
 -
 map
 -
-vector
+set
 -
 
