@@ -124,3 +124,29 @@ Bus 272: Vnukovo Moskovsky Rumyantsevo Troparyovo
 Bus 32: Tolstopaltsevo Marushkino Vnukovo
 Bus 32K: Tolstopaltsevo Marushkino Vnukovo Peredelkino Solntsevo Skolkovo
 Bus 950: Kokoshkino Marushkino Vnukovo Peredelkino Solntsevo Troparyovo
+
+3
+NEW_BUS 100 2 Zoo School
+NEW_BUS 25 4 Store GorkyPark Victoria CentralPark
+NEW_BUS 32 4 Store Store Store Store
+
+
+No buses
+No stop
+No bus
+32 32K
+Stop Vnukovo: 32 32K 950
+Stop Moskovsky: no interchange
+Stop Rumyantsevo: no interchange
+Stop Troparyovo: 950
+Bus 272: Vnukovo Moskovsky Rumyantsevo Troparyovo
+Bus 32: Tolstopaltsevo Marushkino Vnukovo
+Bus 32K: Tolstopaltsevo Marushkino Vnukovo Peredelkino Solntsevo Skolkovo
+Bus 950: Kokoshkino Marushkino Vnukovo Peredelkino Solntsevo Troparyovo
+
+
+10
+BUSES_FOR_STOP Marushkino
+No stop
+STOP Marushkino
+No stop
