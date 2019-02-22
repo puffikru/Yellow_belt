@@ -1,11 +1,9 @@
-#include <string>
-#include <iostream>
-#include <vector>
-#include <map>
-#include <exception>
 #include <sstream>
+#include <exception>
+#include <iostream>
+#include <string>
+#include <map>
 #include <set>
-#include <cmath>
 
 using namespace std;
 
@@ -37,17 +35,19 @@ ostream& operator << (ostream& os, const map<K, V>& m) {
     return os << "}";
 }
 
-
-template <class T, class U>
-void AssertEqual(const T& t, const U& u, const string& hint) {
+template<class T, class U>
+void AssertEqual(const T& t, const U& u,
+                 const string& hint)
+{
     if (t != u) {
         ostringstream os;
-        os << "Assert faild: " << t << " != " << u << "Hint: " << hint;
+        os << "Assertion failed: " << t << " != " << u
+           << " hint: " << hint;
         throw runtime_error(os.str());
     }
 }
 
-void Assert(bool b, const string& hint) {
+inline void Assert(bool b, const string& hint) {
     AssertEqual(b, true, hint);
 }
 
@@ -60,13 +60,13 @@ public:
             cerr << test_name << " OK" << endl;
         } catch (runtime_error& e) {
             ++fail_count;
-            cerr << test_name << " fail:" << e.what() << endl;
+            cerr << test_name << " fail: " << e.what() << endl;
         }
     }
 
     ~TestRunner() {
         if (fail_count > 0) {
-            cerr << fail_count << " tests faild. Terminate";
+            cerr << fail_count << " unit tests failed. Terminate" << endl;
             exit(1);
         }
     }
@@ -74,27 +74,3 @@ public:
 private:
     int fail_count = 0;
 };
-
-
-int GetDistinctRealRootCount(double a, double b, double c) {
-    // Вы можете вставлять сюда различные реализации функции,
-    // чтобы проверить, что ваши тесты пропускают корректный код
-    // и ловят некорректный
-    // ax² + bx + c = 0
-
-}
-
-
-void TestGetDistinctRealRootCount() {
-    {
-
-    }
-}
-
-
-int main() {
-    TestRunner runner;
-    // добавьте сюда свои тесты
-    runner.RunTest(TestGetDistinctRealRootCount, "GetDistinctRealCount");
-    return 0;
-}

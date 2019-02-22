@@ -5,7 +5,6 @@
 #include <exception>
 #include <sstream>
 #include <set>
-#include <cmath>
 
 using namespace std;
 
@@ -75,26 +74,14 @@ private:
     int fail_count = 0;
 };
 
+void TestAll() {
+    TestRunner tr;
 
-int GetDistinctRealRootCount(double a, double b, double c) {
-    // Вы можете вставлять сюда различные реализации функции,
-    // чтобы проверить, что ваши тесты пропускают корректный код
-    // и ловят некорректный
-    // ax² + bx + c = 0
-
-}
-
-
-void TestGetDistinctRealRootCount() {
-    {
-
-    }
 }
 
 
 int main() {
-    TestRunner runner;
-    // добавьте сюда свои тесты
-    runner.RunTest(TestGetDistinctRealRootCount, "GetDistinctRealCount");
+    TestAll();
+
     return 0;
 }
