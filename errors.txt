@@ -34,3 +34,119 @@ Correct output:
 [{"IN_PROGRESS": 3, "TESTING": 1}, {"IN_PROGRESS": 1, "TESTING": 4}]
 {"IN_PROGRESS": 4, "TESTING": 5, "DONE": 1}
  (Time used: 0.01/1.00, preprocess time used: 0/None, memory used: 44797952/536870912.)
+
+AddNewTasks Jack 1
+PerformPersonTasks Jack 1
+AddNewTasks Jack 1
+PerformPersonTasks Jack 2
+AddNewTasks Jack 1
+GetPersonTasksInfo Jack
+PerformPersonTasks Jack 3
+GetPersonTasksInfo Jack
+
+[]
+[{"IN_PROGRESS": 1}, {}]
+[]
+[{"IN_PROGRESS": 1, "TESTING": 1}, {}]
+[]
+{"NEW": 1, "IN_PROGRESS": 1, "TESTING": 1, "DONE": 0}
+[{"IN_PROGRESS": 1, "TESTING": 1, "DONE": 1}, {}]
+{"IN_PROGRESS": 1, "TESTING": 1, "DONE": 1}
+
+
+AddNewTasks Alice 5
+PerformPersonTasks Alice 5
+PerformPersonTasks Alice 5
+PerformPersonTasks Alice 1
+AddNewTasks Alice 5
+PerformPersonTasks Alice 2
+GetPersonTasksInfo Alice
+PerformPersonTasks Alice 4
+GetPersonTasksInfo Alice
+PerformPersonTasks Alice 5
+GetPersonTasksInfo Alice
+PerformPersonTasks Alice 10
+GetPersonTasksInfo Alice
+PerformPersonTasks Alice 10
+GetPersonTasksInfo Alice
+AddNewTasks Alice 1
+GetPersonTasksInfo Alice
+PerformPersonTasks Alice 2
+GetPersonTasksInfo Alice
+PerformPersonTasks Bob 3
+
+
+[]
+[{"IN_PROGRESS": 5}, {}]
+[{"TESTING": 5}, {}]
+[{"DONE": 1}, {"TESTING": 4}]
+[]
+[{"IN_PROGRESS": 2}, {"NEW": 3, "TESTING": 4}]
+{"NEW": 3, "IN_PROGRESS": 2, "TESTING": 4, "DONE": 1}
+[{"IN_PROGRESS": 3, "TESTING": 1}, {"IN_PROGRESS": 1, "TESTING": 4}]
+{"IN_PROGRESS": 4, "TESTING": 5, "DONE": 1}
+[{"TESTING": 4, "DONE": 1}, {"TESTING": 4}]
+{"TESTING": 8, "DONE": 2}
+[{"DONE": 8}, {}]
+{"DONE": 10}
+[{}, {}]
+{"DONE": 10}
+[]
+{"NEW": 1, "DONE": 10}
+[{"IN_PROGRESS": 1}, {}]
+{"IN_PROGRESS": 1, "DONE": 10}
+[{}, {}]
+
+
+
+10
+ALL_BUSES
+BUSES_FOR_STOP Marushkino
+STOPS_FOR_BUS 32K
+NEW_BUS 32 3 Tolstopaltsevo Marushkino Vnukovo
+NEW_BUS 32K 6 Tolstopaltsevo Marushkino Vnukovo Peredelkino Solntsevo Skolkovo
+BUSES_FOR_STOP Vnukovo
+NEW_BUS 950 6 Kokoshkino Marushkino Vnukovo Peredelkino Solntsevo Troparyovo
+NEW_BUS 272 4 Vnukovo Moskovsky Rumyantsevo Troparyovo
+STOPS_FOR_BUS 272
+ALL_BUSES
+
+
+No buses
+No stop
+No bus
+32 32K
+Stop Vnukovo: 32 32K 950
+Stop Moskovsky: no interchange
+Stop Rumyantsevo: no interchange
+Stop Troparyovo: 950
+Bus 272: Vnukovo Moskovsky Rumyantsevo Troparyovo
+Bus 32: Tolstopaltsevo Marushkino Vnukovo
+Bus 32K: Tolstopaltsevo Marushkino Vnukovo Peredelkino Solntsevo Skolkovo
+Bus 950: Kokoshkino Marushkino Vnukovo Peredelkino Solntsevo Troparyovo
+
+3
+NEW_BUS 100 2 Zoo School
+NEW_BUS 25 4 Store GorkyPark Victoria CentralPark
+NEW_BUS 32 4 Store Store Store Store
+
+
+No buses
+No stop
+No bus
+32 32K
+Stop Vnukovo: 32 32K 950
+Stop Moskovsky: no interchange
+Stop Rumyantsevo: no interchange
+Stop Troparyovo: 950
+Bus 272: Vnukovo Moskovsky Rumyantsevo Troparyovo
+Bus 32: Tolstopaltsevo Marushkino Vnukovo
+Bus 32K: Tolstopaltsevo Marushkino Vnukovo Peredelkino Solntsevo Skolkovo
+Bus 950: Kokoshkino Marushkino Vnukovo Peredelkino Solntsevo Troparyovo
+
+
+10
+BUSES_FOR_STOP Marushkino
+No stop
+STOP Marushkino
+No stop

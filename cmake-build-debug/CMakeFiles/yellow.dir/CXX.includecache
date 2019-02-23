@@ -6,15 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/bulakhigor/CLionProjects/yellow/main.cpp
+/Users/bulakhigor/CLionProjects/yellow/synonyms/test_runner.cpp
+test_runner.h
+/Users/bulakhigor/CLionProjects/yellow/synonyms/test_runner.h
+
+/Users/bulakhigor/CLionProjects/yellow/synonyms/test_runner.h
 iostream
 -
-tuple
+string
 -
 map
 -
-sstream
+set
 -
-vector
+sstream
 -
 
