@@ -2,8 +2,6 @@
 // Created by Igor Bulakh on 2019-02-22.
 //
 
-
-
 #ifndef YELLOW_TEST_RUNNER_H
 #define YELLOW_TEST_RUNNER_H
 #pragma once
