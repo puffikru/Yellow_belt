@@ -80,7 +80,10 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/main.cpp">
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/rational/rational.cpp">
+			<Option target="yellow"/>
+		</Unit>
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/rational/test_runner.h">
 			<Option target="yellow"/>
 		</Unit>
 		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/CMakeLists.txt">

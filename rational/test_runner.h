@@ -1,3 +1,10 @@
+//
+// Created by Igor Bulakh on 2019-02-23.
+//
+
+#ifndef YELLOW_TEST_RUNNER_H
+#define YELLOW_TEST_RUNNER_H
+#pragma once
 #include <iostream>
 #include <map>
 #include <set>
@@ -6,10 +13,9 @@
 #include <string>
 #include <vector>
 
-using namespace std;
 
-template <class T>
-ostream& operator << (ostream& os, const vector<T>& s) {
+template<class T>
+ostream& operator<<(ostream& os, const vector<T>& s) {
     os << "{";
     bool first = true;
     for (const auto& x : s) {
@@ -22,8 +28,8 @@ ostream& operator << (ostream& os, const vector<T>& s) {
     return os << "}";
 }
 
-template <class T>
-ostream& operator << (ostream& os, const set<T>& s) {
+template<class T>
+ostream& operator<<(ostream& os, const set<T>& s) {
     os << "{";
     bool first = true;
     for (const auto& x : s) {
@@ -36,8 +42,8 @@ ostream& operator << (ostream& os, const set<T>& s) {
     return os << "}";
 }
 
-template <class K, class V>
-ostream& operator << (ostream& os, const map<K, V>& m) {
+template<class K, class V>
+ostream& operator<<(ostream& os, const map<K, V>& m) {
     os << "{";
     bool first = true;
     for (const auto& kv : m) {
@@ -68,7 +74,7 @@ void Assert(bool b, const string& hint) {
 
 class TestRunner {
 public:
-    template <class TestFunc>
+    template<class TestFunc>
     void RunTest(TestFunc func, const string& test_name) {
         try {
             func();
@@ -93,14 +99,4 @@ private:
     int fail_count = 0;
 };
 
-int GetDistinctRealRootCount(double a, double b, double c) {
-    // Вы можете вставлять сюда различные реализации функции,
-    // чтобы проверить, что ваши тесты пропускают корректный код
-    // и ловят некорректный
-}
-
-int main() {
-    TestRunner runner;
-    // добавьте сюда свои тесты
-    return 0;
-}
+#endif //YELLOW_TEST_RUNNER_H

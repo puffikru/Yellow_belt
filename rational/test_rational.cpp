@@ -8,8 +8,8 @@
 
 using namespace std;
 
-template <class T>
-ostream& operator << (ostream& os, const vector<T>& s) {
+template<class T>
+ostream& operator<<(ostream& os, const vector<T>& s) {
     os << "{";
     bool first = true;
     for (const auto& x : s) {
@@ -22,8 +22,8 @@ ostream& operator << (ostream& os, const vector<T>& s) {
     return os << "}";
 }
 
-template <class T>
-ostream& operator << (ostream& os, const set<T>& s) {
+template<class T>
+ostream& operator<<(ostream& os, const set<T>& s) {
     os << "{";
     bool first = true;
     for (const auto& x : s) {
@@ -36,8 +36,8 @@ ostream& operator << (ostream& os, const set<T>& s) {
     return os << "}";
 }
 
-template <class K, class V>
-ostream& operator << (ostream& os, const map<K, V>& m) {
+template<class K, class V>
+ostream& operator<<(ostream& os, const map<K, V>& m) {
     os << "{";
     bool first = true;
     for (const auto& kv : m) {
@@ -68,7 +68,7 @@ void Assert(bool b, const string& hint) {
 
 class TestRunner {
 public:
-    template <class TestFunc>
+    template<class TestFunc>
     void RunTest(TestFunc func, const string& test_name) {
         try {
             func();
@@ -93,11 +93,22 @@ private:
     int fail_count = 0;
 };
 
-int GetDistinctRealRootCount(double a, double b, double c) {
-    // Вы можете вставлять сюда различные реализации функции,
+class Rational {
+public:
+    // Вы можете вставлять сюда различные реализации,
     // чтобы проверить, что ваши тесты пропускают корректный код
     // и ловят некорректный
-}
+
+    Rational();
+    Rational(int numerator, int denominator) {
+    }
+
+    int Numerator() const {
+    }
+
+    int Denominator() const {
+    }
+};
 
 int main() {
     TestRunner runner;

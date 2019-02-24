@@ -3,5 +3,9 @@ project(yellow)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(yellow main.cpp)
+#add_executable(yellow root_count/main.cpp root_count/root_count.cpp root_count/test_runner.h root_count/tests.h root_count/tests.cpp)
 #add_executable(yellow synonyms/synonims.cpp synonyms/test.h synonyms/test_runner.h synonyms/synonyms.h synonyms/main.cpp synonyms/test_runner.cpp synonyms/test.cpp)
+#add_executable(yellow person/main.cpp person/test_runner.h)
+#add_executable(yellow sum_reverse_sort/sum_reverse_sort.cpp sum_reverse_sort/sum_reverse_sort.h)
+#add_executable(yellow phone_number/phone_number.cpp phone_number/phone_number.h)
+add_executable(yellow rational/rational.cpp rational/test_runner.h)

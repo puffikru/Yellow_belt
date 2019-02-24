@@ -123,32 +123,32 @@ yellow/fast:
 	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/build
 .PHONY : yellow/fast
 
-main.o: main.cpp.o
+rational/rational.o: rational/rational.cpp.o
 
-.PHONY : main.o
+.PHONY : rational/rational.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/main.cpp.o
-.PHONY : main.cpp.o
+rational/rational.cpp.o:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/rational/rational.cpp.o
+.PHONY : rational/rational.cpp.o
 
-main.i: main.cpp.i
+rational/rational.i: rational/rational.cpp.i
 
-.PHONY : main.i
+.PHONY : rational/rational.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/main.cpp.i
-.PHONY : main.cpp.i
+rational/rational.cpp.i:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/rational/rational.cpp.i
+.PHONY : rational/rational.cpp.i
 
-main.s: main.cpp.s
+rational/rational.s: rational/rational.cpp.s
 
-.PHONY : main.s
+.PHONY : rational/rational.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/main.cpp.s
-.PHONY : main.cpp.s
+rational/rational.cpp.s:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/rational/rational.cpp.s
+.PHONY : rational/rational.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... yellow"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... rational/rational.o"
+	@echo "... rational/rational.i"
+	@echo "... rational/rational.s"
 .PHONY : help
 
 

@@ -1,15 +1,15 @@
+#ifndef YELLOW_TEST_RUNNER_H
+#define YELLOW_TEST_RUNNER_H
+#pragma once
 #include <iostream>
-#include <map>
-#include <set>
-#include <sstream>
-#include <stdexcept>
-#include <string>
 #include <vector>
-
-using namespace std;
+#include <set>
+#include <map>
+#include <string>
+#include <sstream>
 
 template <class T>
-ostream& operator << (ostream& os, const vector<T>& s) {
+std::ostream& operator << (std::ostream& os, const std::vector<T>& s) {
     os << "{";
     bool first = true;
     for (const auto& x : s) {
@@ -23,7 +23,7 @@ ostream& operator << (ostream& os, const vector<T>& s) {
 }
 
 template <class T>
-ostream& operator << (ostream& os, const set<T>& s) {
+std::ostream& operator << (std::ostream& os, const std::set<T>& s) {
     os << "{";
     bool first = true;
     for (const auto& x : s) {
@@ -37,7 +37,7 @@ ostream& operator << (ostream& os, const set<T>& s) {
 }
 
 template <class K, class V>
-ostream& operator << (ostream& os, const map<K, V>& m) {
+std::ostream& operator << (std::ostream& os, const std::map<K, V>& m) {
     os << "{";
     bool first = true;
     for (const auto& kv : m) {
@@ -51,40 +51,40 @@ ostream& operator << (ostream& os, const map<K, V>& m) {
 }
 
 template<class T, class U>
-void AssertEqual(const T& t, const U& u, const string& hint = {}) {
+void AssertEqual(const T& t, const U& u, const std::string& hint = {}) {
     if (t != u) {
-        ostringstream os;
+        std::ostringstream os;
         os << "Assertion failed: " << t << " != " << u;
         if (!hint.empty()) {
             os << " hint: " << hint;
         }
-        throw runtime_error(os.str());
+        throw std::runtime_error(os.str());
     }
 }
 
-void Assert(bool b, const string& hint) {
+void Assert(bool b, const std::string& hint) {
     AssertEqual(b, true, hint);
 }
 
 class TestRunner {
 public:
     template <class TestFunc>
-    void RunTest(TestFunc func, const string& test_name) {
+    void RunTest(TestFunc func, const std::string& test_name) {
         try {
             func();
-            cerr << test_name << " OK" << endl;
-        } catch (exception& e) {
+            std::cerr << test_name << " OK" << std::endl;
+        } catch (std::exception& e) {
             ++fail_count;
-            cerr << test_name << " fail: " << e.what() << endl;
+            std::cerr << test_name << " fail: " << e.what() << std::endl;
         } catch (...) {
             ++fail_count;
-            cerr << "Unknown exception caught" << endl;
+            std::cerr << "Unknown exception caught" << std::endl;
         }
     }
 
     ~TestRunner() {
         if (fail_count > 0) {
-            cerr << fail_count << " unit tests failed. Terminate" << endl;
+            std::cerr << fail_count << " unit tests failed. Terminate" << std::endl;
             exit(1);
         }
     }
@@ -93,14 +93,4 @@ private:
     int fail_count = 0;
 };
 
-int GetDistinctRealRootCount(double a, double b, double c) {
-    // Вы можете вставлять сюда различные реализации функции,
-    // чтобы проверить, что ваши тесты пропускают корректный код
-    // и ловят некорректный
-}
-
-int main() {
-    TestRunner runner;
-    // добавьте сюда свои тесты
-    return 0;
-}
+#endif //YELLOW_TEST_RUNNER_H

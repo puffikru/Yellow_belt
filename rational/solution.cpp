@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <map>
 #include <set>
@@ -93,14 +94,29 @@ private:
     int fail_count = 0;
 };
 
-int GetDistinctRealRootCount(double a, double b, double c) {
-    // Вы можете вставлять сюда различные реализации функции,
-    // чтобы проверить, что ваши тесты пропускают корректный код
-    // и ловят некорректный
+void TestPredefined() {
+    AssertEqual(Rational(1, 1).Numerator(), 1, "Canonical form of 1/1 is 1/1");
+    AssertEqual(Rational(1, 1).Denominator(), 1, "Canonical form of 1/1 is 1/1");
+    AssertEqual(Rational(3, 5).Numerator(), 3, "Canonical form of 3/5 is 3/5");
+    AssertEqual(Rational(3, 5).Denominator(), 5, "Canonical form of 3/5 is 3/5");
+    AssertEqual(Rational(2147483647, 2147483647).Numerator(), 1, "Canonical form of 2147483647/2147483647 is 1/1");
+    AssertEqual(Rational(2147483647, 2147483647).Denominator(), 1, "Canonical form of 2147483647/2147483647 is 1/1");
+    AssertEqual(Rational(-5, 4).Numerator(), -5, "Canonical form of -5/4 is -5/4");
+    AssertEqual(Rational(-5, 4).Denominator(), 4, "Canonical form of -5/4 is -5/4");
+    AssertEqual(Rational(5, -4).Numerator(), -5, "Canonical form of 5/-4 is -5/4");
+    AssertEqual(Rational(5, -4).Denominator(), 4, "Canonical form of 5/-4 is -5/4");
+    AssertEqual(Rational(-6, -2).Numerator(), 3, "Canonical form of -6/-2 is 3/1");
+    AssertEqual(Rational(-6, -2).Denominator(), 1, "Canonical form of -6/-2 is 3/1");
+    AssertEqual(Rational(21, 56).Numerator(), 3, "Canonical form of 21/56 is 3/8");
+    AssertEqual(Rational(21, 56).Denominator(), 8, "Canonical form of 21/56 is 3/8");
+    AssertEqual(Rational(0, 100).Numerator(), 0, "Canonical form of 0/100 is 0/1");
+    AssertEqual(Rational(0, 100).Denominator(), 1, "Canonical form of 0/100 is 0/1");
+    AssertEqual(Rational().Numerator(), 0, "Canonical form of default constructed is 0/1");
+    AssertEqual(Rational().Denominator(), 1, "Canonical form of default constructed is 0/1");
 }
 
 int main() {
     TestRunner runner;
-    // добавьте сюда свои тесты
+    runner.RunTest(TestPredefined, "TestPredefined");
     return 0;
 }
