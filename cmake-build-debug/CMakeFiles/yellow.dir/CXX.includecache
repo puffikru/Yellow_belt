@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/bulakhigor/CLionProjects/yellow/rational/rational.cpp
+/Users/bulakhigor/CLionProjects/yellow/palindrom/main.cpp
 iostream
 -
 map
@@ -21,6 +21,6 @@ string
 -
 vector
 -
-limits
+algorithm
 -
 

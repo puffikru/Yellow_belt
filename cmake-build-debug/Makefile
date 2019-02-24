@@ -123,32 +123,32 @@ yellow/fast:
 	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/build
 .PHONY : yellow/fast
 
-rational/rational.o: rational/rational.cpp.o
+palindrom/main.o: palindrom/main.cpp.o
 
-.PHONY : rational/rational.o
+.PHONY : palindrom/main.o
 
 # target to build an object file
-rational/rational.cpp.o:
-	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/rational/rational.cpp.o
-.PHONY : rational/rational.cpp.o
+palindrom/main.cpp.o:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/palindrom/main.cpp.o
+.PHONY : palindrom/main.cpp.o
 
-rational/rational.i: rational/rational.cpp.i
+palindrom/main.i: palindrom/main.cpp.i
 
-.PHONY : rational/rational.i
+.PHONY : palindrom/main.i
 
 # target to preprocess a source file
-rational/rational.cpp.i:
-	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/rational/rational.cpp.i
-.PHONY : rational/rational.cpp.i
+palindrom/main.cpp.i:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/palindrom/main.cpp.i
+.PHONY : palindrom/main.cpp.i
 
-rational/rational.s: rational/rational.cpp.s
+palindrom/main.s: palindrom/main.cpp.s
 
-.PHONY : rational/rational.s
+.PHONY : palindrom/main.s
 
 # target to generate assembly for a file
-rational/rational.cpp.s:
-	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/rational/rational.cpp.s
-.PHONY : rational/rational.cpp.s
+palindrom/main.cpp.s:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/palindrom/main.cpp.s
+.PHONY : palindrom/main.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... yellow"
-	@echo "... rational/rational.o"
-	@echo "... rational/rational.i"
-	@echo "... rational/rational.s"
+	@echo "... palindrom/main.o"
+	@echo "... palindrom/main.i"
+	@echo "... palindrom/main.s"
 .PHONY : help
 
 
