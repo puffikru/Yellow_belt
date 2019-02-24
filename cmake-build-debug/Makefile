@@ -123,32 +123,113 @@ yellow/fast:
 	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/build
 .PHONY : yellow/fast
 
-palindrom/main.o: palindrom/main.cpp.o
+decompose_2/bus_manager.o: decompose_2/bus_manager.cpp.o
 
-.PHONY : palindrom/main.o
+.PHONY : decompose_2/bus_manager.o
 
 # target to build an object file
-palindrom/main.cpp.o:
-	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/palindrom/main.cpp.o
-.PHONY : palindrom/main.cpp.o
+decompose_2/bus_manager.cpp.o:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/decompose_2/bus_manager.cpp.o
+.PHONY : decompose_2/bus_manager.cpp.o
 
-palindrom/main.i: palindrom/main.cpp.i
+decompose_2/bus_manager.i: decompose_2/bus_manager.cpp.i
 
-.PHONY : palindrom/main.i
+.PHONY : decompose_2/bus_manager.i
 
 # target to preprocess a source file
-palindrom/main.cpp.i:
-	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/palindrom/main.cpp.i
-.PHONY : palindrom/main.cpp.i
+decompose_2/bus_manager.cpp.i:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/decompose_2/bus_manager.cpp.i
+.PHONY : decompose_2/bus_manager.cpp.i
 
-palindrom/main.s: palindrom/main.cpp.s
+decompose_2/bus_manager.s: decompose_2/bus_manager.cpp.s
 
-.PHONY : palindrom/main.s
+.PHONY : decompose_2/bus_manager.s
 
 # target to generate assembly for a file
-palindrom/main.cpp.s:
-	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/palindrom/main.cpp.s
-.PHONY : palindrom/main.cpp.s
+decompose_2/bus_manager.cpp.s:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/decompose_2/bus_manager.cpp.s
+.PHONY : decompose_2/bus_manager.cpp.s
+
+decompose_2/main.o: decompose_2/main.cpp.o
+
+.PHONY : decompose_2/main.o
+
+# target to build an object file
+decompose_2/main.cpp.o:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/decompose_2/main.cpp.o
+.PHONY : decompose_2/main.cpp.o
+
+decompose_2/main.i: decompose_2/main.cpp.i
+
+.PHONY : decompose_2/main.i
+
+# target to preprocess a source file
+decompose_2/main.cpp.i:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/decompose_2/main.cpp.i
+.PHONY : decompose_2/main.cpp.i
+
+decompose_2/main.s: decompose_2/main.cpp.s
+
+.PHONY : decompose_2/main.s
+
+# target to generate assembly for a file
+decompose_2/main.cpp.s:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/decompose_2/main.cpp.s
+.PHONY : decompose_2/main.cpp.s
+
+decompose_2/query.o: decompose_2/query.cpp.o
+
+.PHONY : decompose_2/query.o
+
+# target to build an object file
+decompose_2/query.cpp.o:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/decompose_2/query.cpp.o
+.PHONY : decompose_2/query.cpp.o
+
+decompose_2/query.i: decompose_2/query.cpp.i
+
+.PHONY : decompose_2/query.i
+
+# target to preprocess a source file
+decompose_2/query.cpp.i:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/decompose_2/query.cpp.i
+.PHONY : decompose_2/query.cpp.i
+
+decompose_2/query.s: decompose_2/query.cpp.s
+
+.PHONY : decompose_2/query.s
+
+# target to generate assembly for a file
+decompose_2/query.cpp.s:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/decompose_2/query.cpp.s
+.PHONY : decompose_2/query.cpp.s
+
+decompose_2/responses.o: decompose_2/responses.cpp.o
+
+.PHONY : decompose_2/responses.o
+
+# target to build an object file
+decompose_2/responses.cpp.o:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/decompose_2/responses.cpp.o
+.PHONY : decompose_2/responses.cpp.o
+
+decompose_2/responses.i: decompose_2/responses.cpp.i
+
+.PHONY : decompose_2/responses.i
+
+# target to preprocess a source file
+decompose_2/responses.cpp.i:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/decompose_2/responses.cpp.i
+.PHONY : decompose_2/responses.cpp.i
+
+decompose_2/responses.s: decompose_2/responses.cpp.s
+
+.PHONY : decompose_2/responses.s
+
+# target to generate assembly for a file
+decompose_2/responses.cpp.s:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/decompose_2/responses.cpp.s
+.PHONY : decompose_2/responses.cpp.s
 
 # Help Target
 help:
@@ -159,9 +240,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... yellow"
-	@echo "... palindrom/main.o"
-	@echo "... palindrom/main.i"
-	@echo "... palindrom/main.s"
+	@echo "... decompose_2/bus_manager.o"
+	@echo "... decompose_2/bus_manager.i"
+	@echo "... decompose_2/bus_manager.s"
+	@echo "... decompose_2/main.o"
+	@echo "... decompose_2/main.i"
+	@echo "... decompose_2/main.s"
+	@echo "... decompose_2/query.o"
+	@echo "... decompose_2/query.i"
+	@echo "... decompose_2/query.s"
+	@echo "... decompose_2/responses.o"
+	@echo "... decompose_2/responses.i"
+	@echo "... decompose_2/responses.s"
 .PHONY : help
 
 

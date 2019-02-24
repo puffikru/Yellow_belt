@@ -57,30 +57,75 @@ include CMakeFiles/yellow.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/yellow.dir/flags.make
 
-CMakeFiles/yellow.dir/palindrom/main.cpp.o: CMakeFiles/yellow.dir/flags.make
-CMakeFiles/yellow.dir/palindrom/main.cpp.o: ../palindrom/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bulakhigor/CLionProjects/yellow/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/yellow.dir/palindrom/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yellow.dir/palindrom/main.cpp.o -c /Users/bulakhigor/CLionProjects/yellow/palindrom/main.cpp
+CMakeFiles/yellow.dir/decompose_2/main.cpp.o: CMakeFiles/yellow.dir/flags.make
+CMakeFiles/yellow.dir/decompose_2/main.cpp.o: ../decompose_2/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bulakhigor/CLionProjects/yellow/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/yellow.dir/decompose_2/main.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yellow.dir/decompose_2/main.cpp.o -c /Users/bulakhigor/CLionProjects/yellow/decompose_2/main.cpp
 
-CMakeFiles/yellow.dir/palindrom/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yellow.dir/palindrom/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bulakhigor/CLionProjects/yellow/palindrom/main.cpp > CMakeFiles/yellow.dir/palindrom/main.cpp.i
+CMakeFiles/yellow.dir/decompose_2/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yellow.dir/decompose_2/main.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bulakhigor/CLionProjects/yellow/decompose_2/main.cpp > CMakeFiles/yellow.dir/decompose_2/main.cpp.i
 
-CMakeFiles/yellow.dir/palindrom/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yellow.dir/palindrom/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bulakhigor/CLionProjects/yellow/palindrom/main.cpp -o CMakeFiles/yellow.dir/palindrom/main.cpp.s
+CMakeFiles/yellow.dir/decompose_2/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yellow.dir/decompose_2/main.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bulakhigor/CLionProjects/yellow/decompose_2/main.cpp -o CMakeFiles/yellow.dir/decompose_2/main.cpp.s
+
+CMakeFiles/yellow.dir/decompose_2/query.cpp.o: CMakeFiles/yellow.dir/flags.make
+CMakeFiles/yellow.dir/decompose_2/query.cpp.o: ../decompose_2/query.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bulakhigor/CLionProjects/yellow/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/yellow.dir/decompose_2/query.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yellow.dir/decompose_2/query.cpp.o -c /Users/bulakhigor/CLionProjects/yellow/decompose_2/query.cpp
+
+CMakeFiles/yellow.dir/decompose_2/query.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yellow.dir/decompose_2/query.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bulakhigor/CLionProjects/yellow/decompose_2/query.cpp > CMakeFiles/yellow.dir/decompose_2/query.cpp.i
+
+CMakeFiles/yellow.dir/decompose_2/query.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yellow.dir/decompose_2/query.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bulakhigor/CLionProjects/yellow/decompose_2/query.cpp -o CMakeFiles/yellow.dir/decompose_2/query.cpp.s
+
+CMakeFiles/yellow.dir/decompose_2/responses.cpp.o: CMakeFiles/yellow.dir/flags.make
+CMakeFiles/yellow.dir/decompose_2/responses.cpp.o: ../decompose_2/responses.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bulakhigor/CLionProjects/yellow/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/yellow.dir/decompose_2/responses.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yellow.dir/decompose_2/responses.cpp.o -c /Users/bulakhigor/CLionProjects/yellow/decompose_2/responses.cpp
+
+CMakeFiles/yellow.dir/decompose_2/responses.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yellow.dir/decompose_2/responses.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bulakhigor/CLionProjects/yellow/decompose_2/responses.cpp > CMakeFiles/yellow.dir/decompose_2/responses.cpp.i
+
+CMakeFiles/yellow.dir/decompose_2/responses.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yellow.dir/decompose_2/responses.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bulakhigor/CLionProjects/yellow/decompose_2/responses.cpp -o CMakeFiles/yellow.dir/decompose_2/responses.cpp.s
+
+CMakeFiles/yellow.dir/decompose_2/bus_manager.cpp.o: CMakeFiles/yellow.dir/flags.make
+CMakeFiles/yellow.dir/decompose_2/bus_manager.cpp.o: ../decompose_2/bus_manager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bulakhigor/CLionProjects/yellow/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/yellow.dir/decompose_2/bus_manager.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yellow.dir/decompose_2/bus_manager.cpp.o -c /Users/bulakhigor/CLionProjects/yellow/decompose_2/bus_manager.cpp
+
+CMakeFiles/yellow.dir/decompose_2/bus_manager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yellow.dir/decompose_2/bus_manager.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bulakhigor/CLionProjects/yellow/decompose_2/bus_manager.cpp > CMakeFiles/yellow.dir/decompose_2/bus_manager.cpp.i
+
+CMakeFiles/yellow.dir/decompose_2/bus_manager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yellow.dir/decompose_2/bus_manager.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bulakhigor/CLionProjects/yellow/decompose_2/bus_manager.cpp -o CMakeFiles/yellow.dir/decompose_2/bus_manager.cpp.s
 
 # Object files for target yellow
 yellow_OBJECTS = \
-"CMakeFiles/yellow.dir/palindrom/main.cpp.o"
+"CMakeFiles/yellow.dir/decompose_2/main.cpp.o" \
+"CMakeFiles/yellow.dir/decompose_2/query.cpp.o" \
+"CMakeFiles/yellow.dir/decompose_2/responses.cpp.o" \
+"CMakeFiles/yellow.dir/decompose_2/bus_manager.cpp.o"
 
 # External object files for target yellow
 yellow_EXTERNAL_OBJECTS =
 
-yellow: CMakeFiles/yellow.dir/palindrom/main.cpp.o
+yellow: CMakeFiles/yellow.dir/decompose_2/main.cpp.o
+yellow: CMakeFiles/yellow.dir/decompose_2/query.cpp.o
+yellow: CMakeFiles/yellow.dir/decompose_2/responses.cpp.o
+yellow: CMakeFiles/yellow.dir/decompose_2/bus_manager.cpp.o
 yellow: CMakeFiles/yellow.dir/build.make
 yellow: CMakeFiles/yellow.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bulakhigor/CLionProjects/yellow/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable yellow"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bulakhigor/CLionProjects/yellow/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable yellow"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/yellow.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
