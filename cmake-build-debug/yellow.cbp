@@ -80,25 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/decompose_2/bus_manager.cpp">
-			<Option target="yellow"/>
-		</Unit>
-		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/decompose_2/bus_manager.h">
-			<Option target="yellow"/>
-		</Unit>
-		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/decompose_2/main.cpp">
-			<Option target="yellow"/>
-		</Unit>
-		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/decompose_2/query.cpp">
-			<Option target="yellow"/>
-		</Unit>
-		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/decompose_2/query.h">
-			<Option target="yellow"/>
-		</Unit>
-		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/decompose_2/responses.cpp">
-			<Option target="yellow"/>
-		</Unit>
-		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/decompose_2/responses.h">
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/split_words/main.cpp">
 			<Option target="yellow"/>
 		</Unit>
 		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/CMakeLists.txt">
