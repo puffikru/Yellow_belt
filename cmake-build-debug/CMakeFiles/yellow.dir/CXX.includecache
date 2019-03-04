@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/bulakhigor/CLionProjects/yellow/split_words/main.cpp
+/Users/bulakhigor/CLionProjects/yellow/merge_sort/main.cpp
 iostream
 -
 vector
 -
-string
+algorithm
 -
 

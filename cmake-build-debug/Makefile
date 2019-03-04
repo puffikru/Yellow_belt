@@ -123,32 +123,32 @@ yellow/fast:
 	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/build
 .PHONY : yellow/fast
 
-split_words/main.o: split_words/main.cpp.o
+main.o: main.cpp.o
 
-.PHONY : split_words/main.o
+.PHONY : main.o
 
 # target to build an object file
-split_words/main.cpp.o:
-	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/split_words/main.cpp.o
-.PHONY : split_words/main.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-split_words/main.i: split_words/main.cpp.i
+main.i: main.cpp.i
 
-.PHONY : split_words/main.i
+.PHONY : main.i
 
 # target to preprocess a source file
-split_words/main.cpp.i:
-	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/split_words/main.cpp.i
-.PHONY : split_words/main.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-split_words/main.s: split_words/main.cpp.s
+main.s: main.cpp.s
 
-.PHONY : split_words/main.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-split_words/main.cpp.s:
-	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/split_words/main.cpp.s
-.PHONY : split_words/main.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... yellow"
-	@echo "... split_words/main.o"
-	@echo "... split_words/main.i"
-	@echo "... split_words/main.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 .PHONY : help
 
 
