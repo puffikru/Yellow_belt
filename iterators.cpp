@@ -235,7 +235,7 @@ int main() {
 }*/
 
 /*int main() {
-
+http://cpp.com.ru/lippman/c21.html
     vector<string> langs = {
         "Python", "C++", "C", "Java", "C#"
     };

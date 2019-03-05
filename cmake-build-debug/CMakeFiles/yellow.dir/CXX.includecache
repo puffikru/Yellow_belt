@@ -6,11 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/Users/bulakhigor/CLionProjects/yellow/merge_sort/main.cpp
+/Users/bulakhigor/CLionProjects/yellow/build_expression/without_braces.cpp
 iostream
+-
+string
 -
 vector
 -
-algorithm
+deque
 -
 

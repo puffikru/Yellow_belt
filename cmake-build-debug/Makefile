@@ -123,32 +123,32 @@ yellow/fast:
 	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/build
 .PHONY : yellow/fast
 
-main.o: main.cpp.o
+build_expression/main.o: build_expression/main.cpp.o
 
-.PHONY : main.o
+.PHONY : build_expression/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/main.cpp.o
-.PHONY : main.cpp.o
+build_expression/main.cpp.o:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/build_expression/main.cpp.o
+.PHONY : build_expression/main.cpp.o
 
-main.i: main.cpp.i
+build_expression/main.i: build_expression/main.cpp.i
 
-.PHONY : main.i
+.PHONY : build_expression/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/main.cpp.i
-.PHONY : main.cpp.i
+build_expression/main.cpp.i:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/build_expression/main.cpp.i
+.PHONY : build_expression/main.cpp.i
 
-main.s: main.cpp.s
+build_expression/main.s: build_expression/main.cpp.s
 
-.PHONY : main.s
+.PHONY : build_expression/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/main.cpp.s
-.PHONY : main.cpp.s
+build_expression/main.cpp.s:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/build_expression/main.cpp.s
+.PHONY : build_expression/main.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... yellow"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... build_expression/main.o"
+	@echo "... build_expression/main.i"
+	@echo "... build_expression/main.s"
 .PHONY : help
 
 

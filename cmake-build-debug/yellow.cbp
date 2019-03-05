@@ -80,7 +80,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/main.cpp">
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/build_expression/main.cpp">
 			<Option target="yellow"/>
 		</Unit>
 		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/CMakeLists.txt">
