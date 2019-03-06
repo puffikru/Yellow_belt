@@ -12,12 +12,13 @@ pair<RandomIt, RandomIt> FindStartsWith(RandomIt range_begin, RandomIt range_end
     }
 
     auto first = lower_bound(range_begin, range_end, prefix,
-                             [prefix](const string& s, const string& c) {
-                                 return prefix > s.substr(0, prefix.size());
+                             [](const string& s, const string& c) {
+                                 return c > s.substr(0, c.size());
                              });
+
     auto second = upper_bound(range_begin, range_end, prefix,
-                              [prefix](const string& s, const string& c) {
-                                  return prefix < c.substr(0, prefix.size());
+                              [](const string& s, const string& c) {
+                                  return s < c.substr(0, s.size());
                               });
 
     return {first, second};

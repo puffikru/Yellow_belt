@@ -80,7 +80,22 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/build_expression/main.cpp">
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/database.cpp">
+			<Option target="yellow"/>
+		</Unit>
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/database.h">
+			<Option target="yellow"/>
+		</Unit>
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/date.cpp">
+			<Option target="yellow"/>
+		</Unit>
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/date.h">
+			<Option target="yellow"/>
+		</Unit>
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/main.cpp">
+			<Option target="yellow"/>
+		</Unit>
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/test_runner.h">
 			<Option target="yellow"/>
 		</Unit>
 		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/CMakeLists.txt">

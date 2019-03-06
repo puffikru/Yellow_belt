@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/yellow.dir/build_expression/main.cpp.o"
+  "CMakeFiles/yellow.dir/final/main.cpp.o"
+  "CMakeFiles/yellow.dir/final/date.cpp.o"
+  "CMakeFiles/yellow.dir/final/database.cpp.o"
   "yellow.pdb"
   "yellow"
 )
