@@ -6,17 +6,19 @@
 
 #IncludeRegexTransform: 
 
-/Users/bulakhigor/CLionProjects/yellow/final/database.h
-date.h
-/Users/bulakhigor/CLionProjects/yellow/final/date.h
-string
--
+/Users/bulakhigor/CLionProjects/yellow/final/condition_parser.cpp
+condition_parser.h
+/Users/bulakhigor/CLionProjects/yellow/final/condition_parser.h
+token.h
+/Users/bulakhigor/CLionProjects/yellow/final/token.h
+node.h
+/Users/bulakhigor/CLionProjects/yellow/final/node.h
 map
 -
-set
--
-utility
--
+
+/Users/bulakhigor/CLionProjects/yellow/final/condition_parser.h
+node.h
+/Users/bulakhigor/CLionProjects/yellow/final/node.h
 
 /Users/bulakhigor/CLionProjects/yellow/final/date.h
 iostream
@@ -26,33 +28,17 @@ string
 sstream
 -
 
-/Users/bulakhigor/CLionProjects/yellow/final/main.cpp
-database.h
-/Users/bulakhigor/CLionProjects/yellow/final/database.h
+/Users/bulakhigor/CLionProjects/yellow/final/node.cpp
+node.h
+/Users/bulakhigor/CLionProjects/yellow/final/node.h
+
+/Users/bulakhigor/CLionProjects/yellow/final/node.h
 date.h
 /Users/bulakhigor/CLionProjects/yellow/final/date.h
-test_runner.h
-/Users/bulakhigor/CLionProjects/yellow/final/test_runner.h
-iostream
--
-stdexcept
--
+
+/Users/bulakhigor/CLionProjects/yellow/final/token.h
 sstream
 -
 vector
--
-string
--
-
-/Users/bulakhigor/CLionProjects/yellow/final/test_runner.h
-iostream
--
-vector
--
-set
--
-string
--
-map
 -
 

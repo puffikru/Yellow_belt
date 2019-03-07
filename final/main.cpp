@@ -1,6 +1,6 @@
 #include "database.h"
 #include "date.h"
-#include "test_runner.h"
+#include "condition_parser.h"
 
 #include <iostream>
 #include <stdexcept>
@@ -35,14 +35,14 @@ int main() {
       const auto event = ParseEvent(is);
       db.Add(date, event);
     } else if (command == "Print") {
-//      db.Print(cout);
+      db.Print(cout);
     } else if (command == "Del") {
-     /* auto condition = ParseCondition(is);
+      auto condition = ParseCondition(is);
       auto predicate = [condition](const Date& date, const string& event) {
         return condition->Evaluate(date, event);
       };
-      int count = db.RemoveIf(predicate);
-      cout << "Removed " << count << " entries" << endl;*/
+//      int count = db.RemoveIf(predicate);
+//      cout << "Removed " << count << " entries" << endl;
     } else if (command == "Find") {
       /*auto condition = ParseCondition(is);
       auto predicate = [condition](const Date& date, const string& event) {

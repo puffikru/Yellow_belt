@@ -1,8 +1,5 @@
 #pragma once
 
-#include <iostream>
-#include <string>
-
 #include "date.h"
 
 #ifndef YELLOW_NODE_H

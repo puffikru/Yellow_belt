@@ -6,25 +6,27 @@
 
 using namespace std;
 
-Database::Database(const Date& date, const string& event) {
-    storage.first = date;
-    storage.second.insert(event);
-}
 
 void Database::Add(const Date& date, const string& event) {
-    storage.first = date;
-    storage.second.insert(event);
+    if (storage[date].count(event) == 0) {
+        storage[date].insert(event);
+        events[date].push_back(event);
+    }
 }
 
-pair<Date, set<string>> Database::Print(ostream& os) {
-
+void Database::Print(ostream& os) const {
+    for (const auto& date : events) {
+        for (const auto& e: date.second) {
+            cout << date.first << " " << e << endl;
+        }
+    }
 }
 
 int Database::RemoveIf() {
 
 }
 
-pair<Date, set<string>> Database::FindIf() {
+Data Database::FindIf() const {
 
 }
 

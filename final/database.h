@@ -12,26 +12,23 @@ using namespace std;
 #ifndef YELLOW_DATABASE_H
 #define YELLOW_DATABASE_H
 
+typedef pair<Date, set<string>> Data;
+
 class Database {
 public:
-    Database() = default;
-
-    Database(const Date& date, const string& event);
-
     void Add(const Date& date, const string& event);
 
-    pair<Date, set<string>> Print(ostream& os);
-
-//    pair<Date, set<string>> Find(ostream& os);
+    void Print(ostream& os) const;
 
     int RemoveIf();
 
-    pair<Date, set<string>> FindIf();
+    Data FindIf() const;
 
     string Last(const Date& data);
 
 private:
-    pair<Date, set<string>> storage = {{1,1,1}, {""}};
+    map<Date, vector<string>> events;
+    map<Date, set<string>> storage;
 };
 
 #endif //YELLOW_DATABASE_H
