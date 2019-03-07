@@ -110,6 +110,12 @@
 		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/test_runner.h">
 			<Option target="yellow"/>
 		</Unit>
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/token.cpp">
+			<Option target="yellow"/>
+		</Unit>
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/token.h">
+			<Option target="yellow"/>
+		</Unit>
 		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

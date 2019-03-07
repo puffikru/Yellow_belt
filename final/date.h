@@ -29,6 +29,16 @@ Date ParseDate(istringstream& s);
 
 bool operator<(const Date& lhs, const Date& rhs);
 
+bool operator<=(const Date& lhs, const Date& rhs);
+
+bool operator>(const Date& lhs, const Date& rhs);
+
+bool operator>=(const Date& lhs, const Date& rhs);
+
+bool operator==(const Date& lhs, const Date& rhs);
+
+bool operator!=(const Date& lhs, const Date& rhs);
+
 ostream& operator<<(ostream& os, const Date& date);
 
 #endif //YELLOW_DATE_H

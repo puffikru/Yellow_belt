@@ -11,6 +11,31 @@ bool operator<(const Date& lhs, const Date& rhs) {
         vector<int>{rhs.GetYear(), rhs.GetMonth(), rhs.GetDay()};
 }
 
+bool operator<=(const Date& lhs, const Date& rhs) {
+    return vector<int>{lhs.GetYear(), lhs.GetMonth(), lhs.GetDay()} <=
+        vector<int>{rhs.GetYear(), rhs.GetMonth(), rhs.GetDay()};
+}
+
+bool operator>(const Date& lhs, const Date& rhs) {
+    return vector<int>{lhs.GetYear(), lhs.GetMonth(), lhs.GetDay()} >
+        vector<int>{rhs.GetYear(), rhs.GetMonth(), rhs.GetDay()};
+}
+
+bool operator>=(const Date& lhs, const Date& rhs) {
+    return vector<int>{lhs.GetYear(), lhs.GetMonth(), lhs.GetDay()} >=
+        vector<int>{rhs.GetYear(), rhs.GetMonth(), rhs.GetDay()};
+}
+
+bool operator==(const Date& lhs, const Date& rhs) {
+    return vector<int>{lhs.GetYear(), lhs.GetMonth(), lhs.GetDay()} ==
+        vector<int>{rhs.GetYear(), rhs.GetMonth(), rhs.GetDay()};
+}
+
+bool operator!=(const Date& lhs, const Date& rhs) {
+    return vector<int>{lhs.GetYear(), lhs.GetMonth(), lhs.GetDay()} !=
+        vector<int>{rhs.GetYear(), rhs.GetMonth(), rhs.GetDay()};
+}
+
 ostream& operator<<(ostream& os, const Date& date) {
     os << setw(4) << setfill('0') << date.GetYear() <<
        "-" << setw(2) << setfill('0') << date.GetMonth() <<

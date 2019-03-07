@@ -22,14 +22,8 @@ void Database::Print(ostream& os) const {
     }
 }
 
-int Database::RemoveIf() {
 
-}
-
-Data Database::FindIf() const {
-
-}
-
+//TODO: Last
 string Database::Last(const Date& data) {
 
 }

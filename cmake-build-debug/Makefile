@@ -258,6 +258,33 @@ final/node.cpp.s:
 	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/final/node.cpp.s
 .PHONY : final/node.cpp.s
 
+final/token.o: final/token.cpp.o
+
+.PHONY : final/token.o
+
+# target to build an object file
+final/token.cpp.o:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/final/token.cpp.o
+.PHONY : final/token.cpp.o
+
+final/token.i: final/token.cpp.i
+
+.PHONY : final/token.i
+
+# target to preprocess a source file
+final/token.cpp.i:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/final/token.cpp.i
+.PHONY : final/token.cpp.i
+
+final/token.s: final/token.cpp.s
+
+.PHONY : final/token.s
+
+# target to generate assembly for a file
+final/token.cpp.s:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/final/token.cpp.s
+.PHONY : final/token.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -282,6 +309,9 @@ help:
 	@echo "... final/node.o"
 	@echo "... final/node.i"
 	@echo "... final/node.s"
+	@echo "... final/token.o"
+	@echo "... final/token.i"
+	@echo "... final/token.s"
 .PHONY : help
 
 

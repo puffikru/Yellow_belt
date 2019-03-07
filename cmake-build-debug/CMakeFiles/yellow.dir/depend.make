@@ -24,3 +24,6 @@ CMakeFiles/yellow.dir/final/node.cpp.o: ../final/date.h
 CMakeFiles/yellow.dir/final/node.cpp.o: ../final/node.cpp
 CMakeFiles/yellow.dir/final/node.cpp.o: ../final/node.h
 
+CMakeFiles/yellow.dir/final/token.cpp.o: ../final/token.cpp
+CMakeFiles/yellow.dir/final/token.cpp.o: ../final/token.h
+

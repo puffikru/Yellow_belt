@@ -19,16 +19,18 @@ enum class Comparison {
     NotEqual
 };
 
+template <typename T>
+bool Compare(Comparison cmp, const T& lhs, const T& rhs);
 
 
 class Node {
 public:
-    Node(){}
-    virtual bool Evaluate(const Date& date, const string& s) const;
+    virtual bool Evaluate(const Date& date, const string& s) const = 0;
 };
 
 class EmptyNode : public Node {
 public:
+    EmptyNode() = default;
     bool Evaluate(const Date& date, const string& s) const override;
 };
 

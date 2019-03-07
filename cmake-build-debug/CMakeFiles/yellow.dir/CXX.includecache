@@ -6,19 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/Users/bulakhigor/CLionProjects/yellow/final/condition_parser.cpp
-condition_parser.h
 /Users/bulakhigor/CLionProjects/yellow/final/condition_parser.h
-token.h
-/Users/bulakhigor/CLionProjects/yellow/final/token.h
 node.h
 /Users/bulakhigor/CLionProjects/yellow/final/node.h
-map
+
+/Users/bulakhigor/CLionProjects/yellow/final/database.cpp
+database.h
+/Users/bulakhigor/CLionProjects/yellow/final/database.h
+iostream
+-
+vector
+-
+string
 -
 
-/Users/bulakhigor/CLionProjects/yellow/final/condition_parser.h
-node.h
-/Users/bulakhigor/CLionProjects/yellow/final/node.h
+/Users/bulakhigor/CLionProjects/yellow/final/database.h
+date.h
+/Users/bulakhigor/CLionProjects/yellow/final/date.h
+string
+-
+map
+-
+set
+-
+utility
+-
+algorithm
+-
 
 /Users/bulakhigor/CLionProjects/yellow/final/date.h
 iostream
@@ -28,17 +42,25 @@ string
 sstream
 -
 
-/Users/bulakhigor/CLionProjects/yellow/final/node.cpp
-node.h
-/Users/bulakhigor/CLionProjects/yellow/final/node.h
-
-/Users/bulakhigor/CLionProjects/yellow/final/node.h
+/Users/bulakhigor/CLionProjects/yellow/final/main.cpp
+database.h
+/Users/bulakhigor/CLionProjects/yellow/final/database.h
 date.h
 /Users/bulakhigor/CLionProjects/yellow/final/date.h
-
-/Users/bulakhigor/CLionProjects/yellow/final/token.h
+condition_parser.h
+/Users/bulakhigor/CLionProjects/yellow/final/condition_parser.h
+iostream
+-
+stdexcept
+-
 sstream
 -
 vector
 -
+string
+-
+
+/Users/bulakhigor/CLionProjects/yellow/final/node.h
+date.h
+/Users/bulakhigor/CLionProjects/yellow/final/date.h
 

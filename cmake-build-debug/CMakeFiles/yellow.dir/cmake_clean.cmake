@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/yellow.dir/final/database.cpp.o"
   "CMakeFiles/yellow.dir/final/condition_parser.cpp.o"
   "CMakeFiles/yellow.dir/final/node.cpp.o"
+  "CMakeFiles/yellow.dir/final/token.cpp.o"
   "yellow.pdb"
   "yellow"
 )
