@@ -86,6 +86,9 @@
 		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/condition_parser.h">
 			<Option target="yellow"/>
 		</Unit>
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/condition_parser_test.cpp">
+			<Option target="yellow"/>
+		</Unit>
 		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/database.cpp">
 			<Option target="yellow"/>
 		</Unit>

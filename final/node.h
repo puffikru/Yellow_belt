@@ -19,8 +19,26 @@ enum class Comparison {
     NotEqual
 };
 
+//Compile error: Error while compiling unit-tests for contents of file date.h.
+// Details: Compile error: b"In file included from /tmp/submissionwiaw7m21/node.cpp:1:\n/tmp/submissionwiaw7m21/node.h:58:60: fatal error: no template named 'shared_ptr'\n    LogicalOperationNode(const LogicalOperation& op, const shared_ptr<Node>& sp, const shared_ptr<Node>& exp);\n                                                           ^\n1 error generated.\nIn file included from /tmp/submissionwiaw7m21/main.cpp:11:\nIn file included from /tmp/submissionwiaw7m21/database.h:4:\n/tmp/submissionwiaw7m21/node.h:58:60: fatal error: no template named 'shared_ptr'\n    LogicalOperationNode(const LogicalOperation& op, const shared_ptr<Node>& sp, const shared_ptr<Node>& exp);\n                                                           ^\n1 error generated.\nIn file included from /tmp/submissionwiaw7m21/condition_parser.cpp:1:\nIn file included from /tmp/submissionwiaw7m21/condition_parser.h:3:\n/tmp/submissionwiaw7m21/node.h:58:60: fatal error: no template named 'shared_ptr'\n    LogicalOperationNode(const LogicalOperation& op, const shared_ptr<Node>& sp, const shared_ptr<Node>& exp);\n                                                           ^\n1 error generated.\nIn file included from /tmp/submissionwiaw7m21/database.cpp:1:\nIn file included from /tmp/submissionwiaw7m21/database.h:4:\n/tmp/submissionwiaw7m21/node.h:58:60: fatal error: no template named 'shared_ptr'\n    LogicalOperationNode(const LogicalOperation& op, const shared_ptr<Node>& sp, const shared_ptr<Node>& exp);\n
+//
+// ^\n1 error generated.\n"
+
+/*template <typename T>
+bool Compare(Comparison cmp, const T& lhs, const T& rhs);*/
+
 template <typename T>
-bool Compare(Comparison cmp, const T& lhs, const T& rhs);
+bool Compare(Comparison cmp, const T& lhs, const T& rhs) {
+    switch (cmp) {
+        case Comparison::Less: return lhs < rhs;
+        case Comparison::LessOrEqual: return lhs <= rhs;
+        case Comparison::Greater: return lhs > rhs;
+        case Comparison::GreaterOrEqual: return lhs >= rhs;
+        case Comparison::Equal: return lhs == rhs;
+        case Comparison::NotEqual: return lhs != rhs;
+        default: throw logic_error("Wrong comparison type");
+    }
+}
 
 
 class Node {

@@ -7,6 +7,12 @@ CMakeFiles/yellow.dir/final/condition_parser.cpp.o
  /Users/bulakhigor/CLionProjects/yellow/final/date.h
  /Users/bulakhigor/CLionProjects/yellow/final/node.h
  /Users/bulakhigor/CLionProjects/yellow/final/token.h
+CMakeFiles/yellow.dir/final/condition_parser_test.cpp.o
+ /Users/bulakhigor/CLionProjects/yellow/final/condition_parser.h
+ /Users/bulakhigor/CLionProjects/yellow/final/condition_parser_test.cpp
+ /Users/bulakhigor/CLionProjects/yellow/final/date.h
+ /Users/bulakhigor/CLionProjects/yellow/final/node.h
+ /Users/bulakhigor/CLionProjects/yellow/final/test_runner.h
 CMakeFiles/yellow.dir/final/database.cpp.o
  /Users/bulakhigor/CLionProjects/yellow/final/database.cpp
  /Users/bulakhigor/CLionProjects/yellow/final/database.h
@@ -21,6 +27,7 @@ CMakeFiles/yellow.dir/final/main.cpp.o
  /Users/bulakhigor/CLionProjects/yellow/final/date.h
  /Users/bulakhigor/CLionProjects/yellow/final/main.cpp
  /Users/bulakhigor/CLionProjects/yellow/final/node.h
+ /Users/bulakhigor/CLionProjects/yellow/final/test_runner.h
 CMakeFiles/yellow.dir/final/node.cpp.o
  /Users/bulakhigor/CLionProjects/yellow/final/date.h
  /Users/bulakhigor/CLionProjects/yellow/final/node.cpp

@@ -1,5 +1,6 @@
 #include "database.h"
 #include "date.h"
+#include "test_runner.h"
 #include "condition_parser.h"
 
 #include <iostream>
@@ -12,17 +13,17 @@ using namespace std;
 
 string ParseEvent(istream& is) {
     string event;
-    if (is.peek() == ' ') {
+    while (is.peek() == ' ') {
         is.ignore(1);
     }
     getline(is, event);
     return event;
 }
 
-//void TestAll();
+void TestAll();
 
 int main() {
-//  TestAll();
+    TestAll();
 
     Database db;
 
@@ -37,73 +38,58 @@ int main() {
         } else if (command == "Print") {
             db.Print(cout);
         } else if (command == "Del") {
-
-            /*  Add 2017-06-01 1st of June
-                Add 2017-07-08 8th of July
-                Add 2017-07-08 Someone's birthday
-
-                Del date == 2017-07-08
-            */
-
-            auto condition = ParseCondition(is);  // shared_ptr<DateComparisonNode> cmp=Equal Date=2017,7,8
-
-            /* LogicOper: (And) (DateComp -> < Date)  (LogicOper: (OR) (EvantComp-> Equal event) (EvenetComp-> Equal event))
-             * */
-
+            auto condition = ParseCondition(is);
             auto predicate = [condition](const Date& date, const string& event) {
                 return condition->Evaluate(date, event);
             };
-
-
             int count = db.RemoveIf(predicate);
             cout << "Removed " << count << " entries" << endl;
         } else if (command == "Find") {
-            /*auto condition = ParseCondition(is);
+            auto condition = ParseCondition(is);
             auto predicate = [condition](const Date& date, const string& event) {
-              return condition->Evaluate(date, event);
+                return condition->Evaluate(date, event);
             };
-
             const auto entries = db.FindIf(predicate);
             for (const auto& entry : entries) {
-              cout << entry << endl;
+                cout << entry << endl;
             }
-            cout << "Found " << entries.size() << " entries" << endl;*/
+            cout << "Found " << entries.size() << " entries" << endl;
         } else if (command == "Last") {
-            /*try {
+            try {
                 cout << db.Last(ParseDate(is)) << endl;
             } catch (invalid_argument&) {
                 cout << "No entries" << endl;
-            }*/
+            }
         } else if (command.empty()) {
-//      continue;
+            continue;
         } else {
-//      throw logic_error("Unknown command: " + command);
+            throw logic_error("Unknown command: " + command);
         }
     }
 
     return 0;
 }
 
-/*void TestParseEvent() {
-  {
-    istringstream is("event");
-    AssertEqual(ParseEvent(is), "event", "Parse event without leading spaces");
-  }
-  {
-    istringstream is("   sport event ");
-    AssertEqual(ParseEvent(is), "sport event ", "Parse event with leading spaces");
-  }
-  {
-    istringstream is("  first event  \n  second event");
-    vector<string> events;
-    events.push_back(ParseEvent(is));
-    events.push_back(ParseEvent(is));
-    AssertEqual(events, vector<string>{"first event  ", "second event"}, "Parse multiple events");
-  }
+void TestParseEvent() {
+    {
+        istringstream is("event");
+        AssertEqual(ParseEvent(is), "event", "Parse event without leading spaces");
+    }
+    {
+        istringstream is("   sport event ");
+        AssertEqual(ParseEvent(is), "sport event ", "Parse event with leading spaces");
+    }
+    {
+        istringstream is("  first event  \n  second event");
+        vector<string> events;
+        events.push_back(ParseEvent(is));
+        events.push_back(ParseEvent(is));
+        AssertEqual(events, vector<string>{"first event  ", "second event"}, "Parse multiple events");
+    }
 }
 
 void TestAll() {
-  TestRunner tr;
-  tr.RunTest(TestParseEvent, "TestParseEvent");
-  tr.RunTest(TestParseCondition, "TestParseCondition");
-}*/
+    TestRunner tr;
+    tr.RunTest(TestParseEvent, "TestParseEvent");
+    tr.RunTest(TestParseCondition, "TestParseCondition");
+}
