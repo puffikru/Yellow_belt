@@ -6,9 +6,15 @@
 
 #IncludeRegexTransform: 
 
+/Users/bulakhigor/CLionProjects/yellow/final/condition_parser.h
+node.h
+/Users/bulakhigor/CLionProjects/yellow/final/node.h
+
 /Users/bulakhigor/CLionProjects/yellow/final/database.h
 date.h
 /Users/bulakhigor/CLionProjects/yellow/final/date.h
+node.h
+/Users/bulakhigor/CLionProjects/yellow/final/node.h
 string
 -
 map
@@ -16,6 +22,10 @@ map
 set
 -
 utility
+-
+algorithm
+-
+vector
 -
 
 /Users/bulakhigor/CLionProjects/yellow/final/date.h
@@ -31,8 +41,8 @@ database.h
 /Users/bulakhigor/CLionProjects/yellow/final/database.h
 date.h
 /Users/bulakhigor/CLionProjects/yellow/final/date.h
-test_runner.h
-/Users/bulakhigor/CLionProjects/yellow/final/test_runner.h
+condition_parser.h
+/Users/bulakhigor/CLionProjects/yellow/final/condition_parser.h
 iostream
 -
 stdexcept
@@ -44,15 +54,11 @@ vector
 string
 -
 
-/Users/bulakhigor/CLionProjects/yellow/final/test_runner.h
-iostream
--
-vector
--
-set
--
-string
--
-map
--
+/Users/bulakhigor/CLionProjects/yellow/final/node.cpp
+node.h
+/Users/bulakhigor/CLionProjects/yellow/final/node.h
+
+/Users/bulakhigor/CLionProjects/yellow/final/node.h
+date.h
+/Users/bulakhigor/CLionProjects/yellow/final/date.h
 

@@ -96,11 +96,53 @@ CMakeFiles/yellow.dir/final/database.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yellow.dir/final/database.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bulakhigor/CLionProjects/yellow/final/database.cpp -o CMakeFiles/yellow.dir/final/database.cpp.s
 
+CMakeFiles/yellow.dir/final/condition_parser.cpp.o: CMakeFiles/yellow.dir/flags.make
+CMakeFiles/yellow.dir/final/condition_parser.cpp.o: ../final/condition_parser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bulakhigor/CLionProjects/yellow/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/yellow.dir/final/condition_parser.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yellow.dir/final/condition_parser.cpp.o -c /Users/bulakhigor/CLionProjects/yellow/final/condition_parser.cpp
+
+CMakeFiles/yellow.dir/final/condition_parser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yellow.dir/final/condition_parser.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bulakhigor/CLionProjects/yellow/final/condition_parser.cpp > CMakeFiles/yellow.dir/final/condition_parser.cpp.i
+
+CMakeFiles/yellow.dir/final/condition_parser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yellow.dir/final/condition_parser.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bulakhigor/CLionProjects/yellow/final/condition_parser.cpp -o CMakeFiles/yellow.dir/final/condition_parser.cpp.s
+
+CMakeFiles/yellow.dir/final/node.cpp.o: CMakeFiles/yellow.dir/flags.make
+CMakeFiles/yellow.dir/final/node.cpp.o: ../final/node.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bulakhigor/CLionProjects/yellow/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/yellow.dir/final/node.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yellow.dir/final/node.cpp.o -c /Users/bulakhigor/CLionProjects/yellow/final/node.cpp
+
+CMakeFiles/yellow.dir/final/node.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yellow.dir/final/node.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bulakhigor/CLionProjects/yellow/final/node.cpp > CMakeFiles/yellow.dir/final/node.cpp.i
+
+CMakeFiles/yellow.dir/final/node.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yellow.dir/final/node.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bulakhigor/CLionProjects/yellow/final/node.cpp -o CMakeFiles/yellow.dir/final/node.cpp.s
+
+CMakeFiles/yellow.dir/final/token.cpp.o: CMakeFiles/yellow.dir/flags.make
+CMakeFiles/yellow.dir/final/token.cpp.o: ../final/token.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/bulakhigor/CLionProjects/yellow/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/yellow.dir/final/token.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/yellow.dir/final/token.cpp.o -c /Users/bulakhigor/CLionProjects/yellow/final/token.cpp
+
+CMakeFiles/yellow.dir/final/token.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/yellow.dir/final/token.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/bulakhigor/CLionProjects/yellow/final/token.cpp > CMakeFiles/yellow.dir/final/token.cpp.i
+
+CMakeFiles/yellow.dir/final/token.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/yellow.dir/final/token.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/bulakhigor/CLionProjects/yellow/final/token.cpp -o CMakeFiles/yellow.dir/final/token.cpp.s
+
 # Object files for target yellow
 yellow_OBJECTS = \
 "CMakeFiles/yellow.dir/final/main.cpp.o" \
 "CMakeFiles/yellow.dir/final/date.cpp.o" \
-"CMakeFiles/yellow.dir/final/database.cpp.o"
+"CMakeFiles/yellow.dir/final/database.cpp.o" \
+"CMakeFiles/yellow.dir/final/condition_parser.cpp.o" \
+"CMakeFiles/yellow.dir/final/node.cpp.o" \
+"CMakeFiles/yellow.dir/final/token.cpp.o"
 
 # External object files for target yellow
 yellow_EXTERNAL_OBJECTS =
@@ -108,9 +150,12 @@ yellow_EXTERNAL_OBJECTS =
 yellow: CMakeFiles/yellow.dir/final/main.cpp.o
 yellow: CMakeFiles/yellow.dir/final/date.cpp.o
 yellow: CMakeFiles/yellow.dir/final/database.cpp.o
+yellow: CMakeFiles/yellow.dir/final/condition_parser.cpp.o
+yellow: CMakeFiles/yellow.dir/final/node.cpp.o
+yellow: CMakeFiles/yellow.dir/final/token.cpp.o
 yellow: CMakeFiles/yellow.dir/build.make
 yellow: CMakeFiles/yellow.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bulakhigor/CLionProjects/yellow/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable yellow"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/bulakhigor/CLionProjects/yellow/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable yellow"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/yellow.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

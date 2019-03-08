@@ -6,28 +6,26 @@
 
 using namespace std;
 
-Database::Database(const Date& date, const string& event) {
-    storage.first = date;
-    storage.second.insert(event);
-}
 
 void Database::Add(const Date& date, const string& event) {
-    storage.first = date;
-    storage.second.insert(event);
+    Entry e = make_pair(date, event);
+    if (storage[e.first].count(e) == 0) {
+        storage[e.first].insert(e);
+        events[e.first].push_back(e);
+        dates.insert(e.first);
+    }
 }
 
-pair<Date, set<string>> Database::Print(ostream& os) {
-
+void Database::Print(ostream& os) const {
+    for (const auto& date : events) {
+        for (const auto& e: date.second) {
+            cout << date.first << " " << e.second << endl;
+        }
+    }
 }
 
-int Database::RemoveIf() {
 
-}
-
-pair<Date, set<string>> Database::FindIf() {
-
-}
-
+//TODO: Last
 string Database::Last(const Date& data) {
 
 }

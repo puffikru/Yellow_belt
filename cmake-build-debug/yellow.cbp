@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/condition_parser.cpp">
+			<Option target="yellow"/>
+		</Unit>
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/condition_parser.h">
+			<Option target="yellow"/>
+		</Unit>
 		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/database.cpp">
 			<Option target="yellow"/>
 		</Unit>
@@ -95,7 +101,19 @@
 		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/main.cpp">
 			<Option target="yellow"/>
 		</Unit>
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/node.cpp">
+			<Option target="yellow"/>
+		</Unit>
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/node.h">
+			<Option target="yellow"/>
+		</Unit>
 		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/test_runner.h">
+			<Option target="yellow"/>
+		</Unit>
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/token.cpp">
+			<Option target="yellow"/>
+		</Unit>
+		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/final/token.h">
 			<Option target="yellow"/>
 		</Unit>
 		<Unit filename="/Users/bulakhigor/CLionProjects/yellow/CMakeLists.txt">

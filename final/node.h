@@ -1,8 +1,5 @@
 #pragma once
 
-#include <iostream>
-#include <string>
-
 #include "date.h"
 
 #ifndef YELLOW_NODE_H
@@ -22,16 +19,18 @@ enum class Comparison {
     NotEqual
 };
 
+template <typename T>
+bool Compare(Comparison cmp, const T& lhs, const T& rhs);
 
 
 class Node {
 public:
-    Node(){}
-    virtual bool Evaluate(const Date& date, const string& s) const;
+    virtual bool Evaluate(const Date& date, const string& s) const = 0;
 };
 
 class EmptyNode : public Node {
 public:
+    EmptyNode() = default;
     bool Evaluate(const Date& date, const string& s) const override;
 };
 
@@ -47,11 +46,11 @@ private:
 
 class EventComparisonNode : public Node {
 public:
-    EventComparisonNode(const Comparison& cmp, const string& value);
+    EventComparisonNode(const Comparison& cmp, const string& event);
     bool Evaluate(const Date& date, const string& s) const override;
 private:
     const Comparison cmp_;
-    const string value_;
+    const string event_;
 };
 
 class LogicalOperationNode : public Node {
