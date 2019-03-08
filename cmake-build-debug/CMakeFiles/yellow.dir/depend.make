@@ -10,6 +10,7 @@ CMakeFiles/yellow.dir/final/condition_parser.cpp.o: ../final/token.h
 CMakeFiles/yellow.dir/final/database.cpp.o: ../final/database.cpp
 CMakeFiles/yellow.dir/final/database.cpp.o: ../final/database.h
 CMakeFiles/yellow.dir/final/database.cpp.o: ../final/date.h
+CMakeFiles/yellow.dir/final/database.cpp.o: ../final/node.h
 
 CMakeFiles/yellow.dir/final/date.cpp.o: ../final/date.cpp
 CMakeFiles/yellow.dir/final/date.cpp.o: ../final/date.h

@@ -8,16 +8,18 @@ using namespace std;
 
 
 void Database::Add(const Date& date, const string& event) {
-    if (storage[date].count(event) == 0) {
-        storage[date].insert(event);
-        events[date].push_back(event);
+    Entry e = make_pair(date, event);
+    if (storage[e.first].count(e) == 0) {
+        storage[e.first].insert(e);
+        events[e.first].push_back(e);
+        dates.insert(e.first);
     }
 }
 
 void Database::Print(ostream& os) const {
     for (const auto& date : events) {
         for (const auto& e: date.second) {
-            cout << date.first << " " << e << endl;
+            cout << date.first << " " << e.second << endl;
         }
     }
 }

@@ -1,7 +1,3 @@
-//
-// Created by Igor Bulakh on 2019-03-06.
-//
-
 #include "node.h"
 
 template <typename T>
@@ -28,17 +24,19 @@ bool DateComparisonNode::Evaluate(const Date& date, const string& s) const {
     return Compare(cmp_, date, date_);
 }
 
-EventComparisonNode::EventComparisonNode(const Comparison& cmp, const string& value) : cmp_(cmp), value_(value) {}
+EventComparisonNode::EventComparisonNode(const Comparison& cmp, const string& event) : cmp_(cmp), event_(event) {}
 
-//TODO: EventComparisonNode
 bool EventComparisonNode::Evaluate(const Date& date, const string& s) const {
-
+    return Compare(cmp_, s, event_);
 }
 
 LogicalOperationNode::LogicalOperationNode(const LogicalOperation& op, const shared_ptr<Node>& sp, const shared_ptr<Node>& exp)
     : op_(op), sp_(sp), exp_(exp) {}
 
-//TODO: LogicalOperationNode
 bool LogicalOperationNode::Evaluate(const Date& date, const string& s) const {
-
+    if (op_ == LogicalOperation::And) {
+        return sp_->Evaluate(date, s) && exp_->Evaluate(date, s);
+    } else if (op_ == LogicalOperation::Or) {
+        return sp_->Evaluate(date, s) || exp_->Evaluate(date, s);
+    }
 }

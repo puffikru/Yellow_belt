@@ -46,11 +46,11 @@ private:
 
 class EventComparisonNode : public Node {
 public:
-    EventComparisonNode(const Comparison& cmp, const string& value);
+    EventComparisonNode(const Comparison& cmp, const string& event);
     bool Evaluate(const Date& date, const string& s) const override;
 private:
     const Comparison cmp_;
-    const string value_;
+    const string event_;
 };
 
 class LogicalOperationNode : public Node {
