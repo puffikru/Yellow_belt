@@ -18,7 +18,7 @@ void Database::Add(const Date& date, const string& event) {
 void Database::Print(ostream& os) const {
     for (const auto& date : events) {
         for (const auto& e: date.second) {
-            cout << date.first << " " << e.second << endl;
+            os << e << endl;
         }
     }
 }
@@ -34,6 +34,6 @@ Entry Database::Last(const Date& data) const {
 }
 
 ostream& operator<<(ostream& os, const Entry& e) {
-    os << e.first << " " << e.second << endl;
+    os << e.first << " " << e.second;
     return os;
 }

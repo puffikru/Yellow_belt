@@ -2,12 +2,16 @@
 #include "date.h"
 #include "test_runner.h"
 #include "condition_parser.h"
+#include "node.h"
+#include "token.h"
 
 #include <iostream>
 #include <stdexcept>
 #include <sstream>
 #include <vector>
 #include <string>
+#include <memory>
+#include <iosfwd>
 
 using namespace std;
 
@@ -90,6 +94,14 @@ void TestParseEvent() {
 
 void TestAll() {
     TestRunner tr;
-    tr.RunTest(TestParseEvent, "TestParseEvent");
-    tr.RunTest(TestParseCondition, "TestParseCondition");
+    /*tr.RunTest(TestParseDate, "TestParseDate");
+    tr.RunTest(TestDateComparison, "TestDateComparison");*/
+//    tr.RunTest(TestParseCondition, "TestParseCondition");
+//    tr.RunTest(TestDate, "TestDate");
+//    tr.RunTest(TestDatabasePrint, "TestDatabasePrint");
+//    tr.RunTest(TestDatabaseDel, "TestDatabaseDel");
+//    tr.RunTest(TestDatabaseLast, "TestDatabaseLast");
+//    tr.RunTest(TestDatabaseFind, "TestDatabaseFind");
+//    tr.RunTest(TestParseEvent, "TestParseEvent");
+//    tr.RunTest(TestParseCondition, "TestParseCondition");
 }

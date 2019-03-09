@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <memory>
 
 using namespace std;
 
@@ -11,6 +12,7 @@ using namespace std;
 
 class Date {
 public:
+    Date() = default;
     Date(int new_year, int new_month, int new_day);
 
     int GetYear() const;
@@ -25,7 +27,7 @@ private:
     int day;
 };
 
-Date ParseDate(istringstream& s);
+Date ParseDate(istream& s);
 
 bool operator<(const Date& lhs, const Date& rhs);
 

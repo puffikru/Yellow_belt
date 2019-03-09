@@ -1,5 +1,18 @@
 #include "node.h"
 
+template <typename T>
+bool Compare(Comparison cmp, const T& lhs, const T& rhs) {
+    switch (cmp) {
+        case Comparison::Less: return lhs < rhs;
+        case Comparison::LessOrEqual: return lhs <= rhs;
+        case Comparison::Greater: return lhs > rhs;
+        case Comparison::GreaterOrEqual: return lhs >= rhs;
+        case Comparison::Equal: return lhs == rhs;
+        case Comparison::NotEqual: return lhs != rhs;
+        default: throw logic_error("Wrong comparison type");
+    }
+}
+
 
 bool EmptyNode::Evaluate(const Date& date, const string& s) const {
     return true;

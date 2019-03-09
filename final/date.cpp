@@ -3,6 +3,7 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>
+#include <sstream>
 
 using namespace std;
 
@@ -60,7 +61,7 @@ int Date::GetDay() const {
     return day;
 }
 
-Date ParseDate(istringstream& s) {
+Date ParseDate(istream& s) {
     int year;
     s >> year;
     if (s.peek() == '-') {
