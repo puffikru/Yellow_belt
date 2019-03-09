@@ -39,4 +39,5 @@ bool LogicalOperationNode::Evaluate(const Date& date, const string& s) const {
     } else if (op_ == LogicalOperation::Or) {
         return sp_->Evaluate(date, s) || exp_->Evaluate(date, s);
     }
+    throw logic_error("Wrong logic operation");
 }

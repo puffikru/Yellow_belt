@@ -1,12 +1,10 @@
 #include "condition_parser.h"
 #include "token.h"
 
-#include <memory>
 #include <map>
+using namespace std;
 
-
-template <class It>
-shared_ptr<Node> ParseComparison(It& current, It end) {
+template <class It> shared_ptr<Node> ParseComparison(It& current, It end) {
   if (current == end) {
     throw logic_error("Expected column name: date or event");
   }
@@ -106,7 +104,6 @@ shared_ptr<Node> ParseExpression(It& current, It end, unsigned precedence) {
 
 shared_ptr<Node> ParseCondition(istream& is) {
   auto tokens = Tokenize(is);
-
   auto current = tokens.begin();
   auto top_node = ParseExpression(current, tokens.end(), 0u);
 

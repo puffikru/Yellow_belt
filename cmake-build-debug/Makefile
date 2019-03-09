@@ -150,6 +150,33 @@ final/condition_parser.cpp.s:
 	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/final/condition_parser.cpp.s
 .PHONY : final/condition_parser.cpp.s
 
+final/condition_parser_test.o: final/condition_parser_test.cpp.o
+
+.PHONY : final/condition_parser_test.o
+
+# target to build an object file
+final/condition_parser_test.cpp.o:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/final/condition_parser_test.cpp.o
+.PHONY : final/condition_parser_test.cpp.o
+
+final/condition_parser_test.i: final/condition_parser_test.cpp.i
+
+.PHONY : final/condition_parser_test.i
+
+# target to preprocess a source file
+final/condition_parser_test.cpp.i:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/final/condition_parser_test.cpp.i
+.PHONY : final/condition_parser_test.cpp.i
+
+final/condition_parser_test.s: final/condition_parser_test.cpp.s
+
+.PHONY : final/condition_parser_test.s
+
+# target to generate assembly for a file
+final/condition_parser_test.cpp.s:
+	$(MAKE) -f CMakeFiles/yellow.dir/build.make CMakeFiles/yellow.dir/final/condition_parser_test.cpp.s
+.PHONY : final/condition_parser_test.cpp.s
+
 final/database.o: final/database.cpp.o
 
 .PHONY : final/database.o
@@ -297,6 +324,9 @@ help:
 	@echo "... final/condition_parser.o"
 	@echo "... final/condition_parser.i"
 	@echo "... final/condition_parser.s"
+	@echo "... final/condition_parser_test.o"
+	@echo "... final/condition_parser_test.i"
+	@echo "... final/condition_parser_test.s"
 	@echo "... final/database.o"
 	@echo "... final/database.i"
 	@echo "... final/database.s"

@@ -49,7 +49,7 @@ public:
         }
 
         for (const auto& e : storage) {
-            if(storage.at(e.first).empty()) {
+            if (storage.at(e.first).empty()) {
                 dates.erase(e.first);
             }
         }
@@ -57,19 +57,26 @@ public:
         return remove_cnt;
     }
 
-
-    //TODO: FindIf
     template<typename Predicate>
-    Entry FindIf(Predicate p) const {
-
+    vector<Entry> FindIf(Predicate p) const {
+        vector<Entry> result;
+        for (const auto& date : dates) {
+            vector<Entry> v = events.at(date);
+            copy_if(begin(v), end(v), back_inserter(result), [p](const Entry& e) {
+                return p(e.first, e.second);
+            });
+        }
+        return result;
     }
 
-    string Last(const Date& data);
+    Entry Last(const Date& data) const;
 
 private:
     set<Date> dates;
     map<Date, vector<Entry>> events;
     map<Date, set<Entry>> storage;
 };
+
+ostream& operator<<(ostream& os, const Entry& e);
 
 #endif //YELLOW_DATABASE_H

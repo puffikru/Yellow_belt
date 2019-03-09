@@ -7,6 +7,12 @@ CMakeFiles/yellow.dir/final/condition_parser.cpp.o: ../final/date.h
 CMakeFiles/yellow.dir/final/condition_parser.cpp.o: ../final/node.h
 CMakeFiles/yellow.dir/final/condition_parser.cpp.o: ../final/token.h
 
+CMakeFiles/yellow.dir/final/condition_parser_test.cpp.o: ../final/condition_parser.h
+CMakeFiles/yellow.dir/final/condition_parser_test.cpp.o: ../final/condition_parser_test.cpp
+CMakeFiles/yellow.dir/final/condition_parser_test.cpp.o: ../final/date.h
+CMakeFiles/yellow.dir/final/condition_parser_test.cpp.o: ../final/node.h
+CMakeFiles/yellow.dir/final/condition_parser_test.cpp.o: ../final/test_runner.h
+
 CMakeFiles/yellow.dir/final/database.cpp.o: ../final/database.cpp
 CMakeFiles/yellow.dir/final/database.cpp.o: ../final/database.h
 CMakeFiles/yellow.dir/final/database.cpp.o: ../final/date.h
@@ -20,6 +26,7 @@ CMakeFiles/yellow.dir/final/main.cpp.o: ../final/database.h
 CMakeFiles/yellow.dir/final/main.cpp.o: ../final/date.h
 CMakeFiles/yellow.dir/final/main.cpp.o: ../final/main.cpp
 CMakeFiles/yellow.dir/final/main.cpp.o: ../final/node.h
+CMakeFiles/yellow.dir/final/main.cpp.o: ../final/test_runner.h
 
 CMakeFiles/yellow.dir/final/node.cpp.o: ../final/date.h
 CMakeFiles/yellow.dir/final/node.cpp.o: ../final/node.cpp
